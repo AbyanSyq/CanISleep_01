@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System; // Dibutuhkan untuk Action
 
 public class PlayerInputHandler2D : MonoBehaviour
 {
@@ -8,45 +9,55 @@ public class PlayerInputHandler2D : MonoBehaviour
     public bool jump;
     public bool sprint;
 
-    private PlayerInputAction inputActions;
+    // Event untuk memberitahu script lain bahwa tombol Interact ditekan
+    public event Action OnInteractEvent;
+
+    private PlayerInputAction _inputActions;
 
     private void Awake()
     {
-        inputActions = new PlayerInputAction();
+        _inputActions = new PlayerInputAction();
     }
 
     private void OnEnable()
     {
-        inputActions.Player.Enable();
+        _inputActions.Player.Enable();
 
-        // Move: Menggunakan performed dan canceled agar pergerakan responsif
-        inputActions.Player.Move.performed += OnMove;
-        inputActions.Player.Move.canceled += OnMove;
+        // Movement
+        _inputActions.Player.Move.performed += OnMove;
+        _inputActions.Player.Move.canceled += OnMove;
 
-        // Jump: Menggunakan started untuk deteksi tekan dan canceled untuk lepas
-        inputActions.Player.Jump.started += OnJump;
-        inputActions.Player.Jump.canceled += OnJump;
+        // Jump
+        _inputActions.Player.Jump.started += OnJump;
+        _inputActions.Player.Jump.canceled += OnJump;
 
         // Sprint
-        inputActions.Player.Sprint.performed += OnSprint;
-        inputActions.Player.Sprint.canceled += OnSprint;
+        _inputActions.Player.Sprint.performed += OnSprint;
+        _inputActions.Player.Sprint.canceled += OnSprint;
+
+        // Interact (BARU: Kita tambahkan listener di sini)
+        _inputActions.Player.Interact.performed += OnInteract;
     }
 
     private void OnDisable()
     {
-        inputActions.Player.Move.performed -= OnMove;
-        inputActions.Player.Move.canceled -= OnMove;
+        _inputActions.Player.Move.performed -= OnMove;
+        _inputActions.Player.Move.canceled -= OnMove;
 
-        inputActions.Player.Jump.started -= OnJump;
-        inputActions.Player.Jump.canceled -= OnJump;
+        _inputActions.Player.Jump.started -= OnJump;
+        _inputActions.Player.Jump.canceled -= OnJump;
 
-        inputActions.Player.Sprint.performed -= OnSprint;
-        inputActions.Player.Sprint.canceled -= OnSprint;
+        _inputActions.Player.Sprint.performed -= OnSprint;
+        _inputActions.Player.Sprint.canceled -= OnSprint;
 
-        inputActions.Player.Disable();
+        // Interact Cleanup
+        _inputActions.Player.Interact.performed -= OnInteract;
+
+        _inputActions.Player.Disable();
     }
 
     #region Input Action Callbacks
+
     private void OnMove(InputAction.CallbackContext ctx)
     {
         move = ctx.ReadValue<Vector2>();
@@ -60,6 +71,15 @@ public class PlayerInputHandler2D : MonoBehaviour
     private void OnSprint(InputAction.CallbackContext ctx)  
     {   
         sprint = ctx.ReadValueAsButton();   
-    }   
+    }
+
+    // Callback khusus Interact
+    private void OnInteract(InputAction.CallbackContext ctx)
+    {
+        // Invoke (panggil) event jika ada script lain yang mendengarkan (seperti InteractHandler2D)
+        OnInteractEvent?.Invoke();
+        Debug.Log("Interact button pressed.");
+    }
+
     #endregion
 }
