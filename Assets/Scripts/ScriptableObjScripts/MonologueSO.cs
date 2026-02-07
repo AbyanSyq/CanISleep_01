@@ -13,6 +13,7 @@ public class MonologueTextData
 {
     public MonologueType type;
     public Sprite icon;
+    public float displayDuration = 2.0f;
     [TextArea(3, 10)]
     public string text;
 }
@@ -21,4 +22,5 @@ public class MonologueTextData
 public class MonologueSO : ScriptableObject
 {
     public List<MonologueTextData> monologueDataList;
+    public float intervalBetweenTexts = 1.0f;
 }

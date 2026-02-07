@@ -260,11 +260,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7070734083234590228, guid: a1014a861a0b3d54b96edcebf675d2da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.14091
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7070734083234590228, guid: a1014a861a0b3d54b96edcebf675d2da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.80104
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7070734083234590228, guid: a1014a861a0b3d54b96edcebf675d2da, type: 3}
       propertyPath: m_LocalPosition.z
@@ -302,10 +302,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: MonologueManager
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2532552392830310447, guid: a1014a861a0b3d54b96edcebf675d2da, type: 3}
-    m_RemovedGameObjects:
-    - {fileID: 6173877112451387754, guid: a1014a861a0b3d54b96edcebf675d2da, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1014a861a0b3d54b96edcebf675d2da, type: 3}
@@ -354,6 +352,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CorpseGenerator
   corpsePrefab: {fileID: 7253937788868658042, guid: e370c3c4ea77d66488ef4aa08b13e30b, type: 3}
+--- !u!1 &1078373220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1078373221}
+  - component: {fileID: 1078373222}
+  m_Layer: 0
+  m_Name: GameplayManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1078373221
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078373220}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1078373222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078373220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f0dff9bbc99e249a424ea01fbd1d50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameplayManager
+  monologueSO: {fileID: 11400000, guid: 69fc1489c07b5974cb5395c492579580, type: 2}
 --- !u!1 &1312339713
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,4 +1079,5 @@ SceneRoots:
   - {fileID: 864985538}
   - {fileID: 1340084894}
   - {fileID: 470891159}
+  - {fileID: 1078373221}
   - {fileID: 820237384}
