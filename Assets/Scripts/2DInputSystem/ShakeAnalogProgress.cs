@@ -12,10 +12,13 @@ public class ShakeAnalogProgress : MonoBehaviour
     [Header("References")]
     [SerializeField] private Animator animator;
     [SerializeField] private string animationParameter = "LightParam";
+    [SerializeField] private string animationParameterIsProgressing = "IsProgressing";
+    [SerializeField] private string animationParameterIsCompleteTrigger = "IsComplete";
     [SerializeField] private PlayerInputHandler2D inputHandler;
 
     [Header("Settings")]
     [Range(0, 1)] public float progress = 0f;
+    public bool isProgressing = false;
     [Tooltip("Sensitivitas gerakan. Semakin besar, semakin cepat penuh.")]
     public float sensitivity = 0.5f;
     public float decayRate = 0.1f; 
@@ -46,11 +49,13 @@ public class ShakeAnalogProgress : MonoBehaviour
         // Jika salah satu analog bergerak secara aktif
         if ((currentMove.magnitude > deadzone || currentLook.magnitude > deadzone) && progress < 1f)
         {
+            isProgressing = true;
             ProcessShake(moveDelta, lookDelta);
             TriggerVibration(vibrationIntensity, vibrationIntensity);
         }
         else
         {
+            isProgressing = false;
             ApplyDecay();
             StopVibration();
         }
@@ -66,7 +71,10 @@ public class ShakeAnalogProgress : MonoBehaviour
     private void LateUpdate()
     {
         if (animator != null)
+        {
+            animator.SetBool(animationParameterIsProgressing, isProgressing);
             animator.SetFloat(animationParameter, progress);
+        }
     }
 
     private void OnDisable() => StopVibration();
@@ -101,6 +109,10 @@ public class ShakeAnalogProgress : MonoBehaviour
         StopVibration();
         OnProgressComplete?.Invoke();
         ShakeAnalogProgressEvents.OnShakeProgressComplete?.Invoke();
+        if (animator != null)
+        {
+            animator.SetTrigger(animationParameterIsCompleteTrigger);
+        }
     }
 
     private void TriggerVibration(float leftMotor, float rightMotor)

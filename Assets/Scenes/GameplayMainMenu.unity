@@ -272,7 +272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &108938649
 Transform:
   m_ObjectHideFlags: 0
@@ -426,7 +426,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -976591009
   m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: c4ff1a1783bb3384c93a198112f5bded, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -747,6 +747,7 @@ GameObject:
   m_Component:
   - component: {fileID: 577624259}
   - component: {fileID: 577624258}
+  - component: {fileID: 577624260}
   m_Layer: 0
   m_Name: bg
   m_TagString: Untagged
@@ -830,6 +831,28 @@ Transform:
   - {fileID: 426093715}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &577624260
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577624257}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1095035774
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,6 +953,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1307632660}
+  - component: {fileID: 1307632661}
   m_Layer: 0
   m_Name: Pintu
   m_TagString: Untagged
@@ -954,6 +978,27 @@ Transform:
   - {fileID: 424838159}
   m_Father: {fileID: 577624259}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1307632661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307632659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a42a078cf5fee5040a7232d62ff2fb98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  targetObjectActive:
+  - {fileID: 108938648}
+  targetObjectDeactive:
+  - {fileID: 424838158}
+  minWaitTime: 2
+  maxWaitTime: 3
+  hintDuration: 2
+  minActiveDuration: 1
+  maxActiveDuration: 2
 --- !u!1001 &1491528604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1029,7 +1074,7 @@ PrefabInstance:
     - target: {fileID: 6442202971561404052, guid: 9521027a9e4487b46a04c14c094c99c5, type: 3}
       propertyPath: uiEntries.Array.data[0].instance
       value: 
-      objectReference: {fileID: 1899119177}
+      objectReference: {fileID: 1883693605}
     - target: {fileID: 8770394655020971654, guid: 9521027a9e4487b46a04c14c094c99c5, type: 3}
       propertyPath: m_Name
       value: UIManager
@@ -1039,7 +1084,7 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8045828541637843849, guid: 9521027a9e4487b46a04c14c094c99c5, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1899119178}
+      addedObject: {fileID: 1883693606}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9521027a9e4487b46a04c14c094c99c5, type: 3}
 --- !u!224 &1491528605 stripped
@@ -1108,19 +1153,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9808d437d064cfd428320448874885f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShakeAnalogProgress
-  animator: {fileID: 0}
-  animationParameter: 
+  animator: {fileID: 426093716}
+  animationParameter: progress
+  animationParameterIsProgressing: isPlaying
+  animationParameterIsCompleteTrigger: IsComplete
   inputHandler: {fileID: 1798288116}
   progress: 0
+  isProgressing: 0
   sensitivity: 0.5
-  decayRate: 1
+  decayRate: 0.01
   deadzone: 0.1
-  useVibration: 1
-  vibrationIntensity: 0.3
+  useVibration: 0
+  vibrationIntensity: 0
   OnProgressComplete:
     m_PersistentCalls:
       m_Calls: []
---- !u!1001 &1899119176
+--- !u!1001 &1883693604
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1221,10 +1269,10 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7af66b6fdb006b4482e8dfbec658363, type: 3}
---- !u!114 &1899119177 stripped
+--- !u!114 &1883693605 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1526753974872152792, guid: c7af66b6fdb006b4482e8dfbec658363, type: 3}
-  m_PrefabInstance: {fileID: 1899119176}
+  m_PrefabInstance: {fileID: 1883693604}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -1232,10 +1280,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93b48176216353944bcdc612b39597ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIGameplayMainMenu
---- !u!224 &1899119178 stripped
+--- !u!224 &1883693606 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4446783563609570171, guid: c7af66b6fdb006b4482e8dfbec658363, type: 3}
-  m_PrefabInstance: {fileID: 1899119176}
+  m_PrefabInstance: {fileID: 1883693604}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
