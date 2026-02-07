@@ -6,6 +6,7 @@ using System.Collections;
 
 public class UIMonologue : UIBase
 {
+    [SerializeField] private UIBase uiText;
     [SerializeField] private Image speakerIcon; // Untuk menampung icon dari textData
     [SerializeField] private TextMeshProUGUI monologueText;
 
@@ -22,7 +23,7 @@ public class UIMonologue : UIBase
 
         // Update UI Elements
         if (speakerIcon != null) speakerIcon.sprite = data.icon;
-        
+        if (uiText != null) uiText.Show();
         typingRoutine = StartCoroutine(TypeMonologue(data.text));
         
         Debug.Log($"Displaying Monologue: {data.type}");
@@ -41,6 +42,11 @@ public class UIMonologue : UIBase
         }
 
         isTyping = false;
+    }
+    public void HideUIText()
+    {
+        if (uiText != null)
+            uiText.Hide();
     }
 
     // Optional: Jika ingin skip animasi ketik
