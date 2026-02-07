@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using System; // Dibutuhkan untuk Action
+using System;
 
 public class PlayerInputHandler2D : MonoBehaviour
 {
     [Header("Character Input Values")]
     public Vector2 move;
+    public Vector2 look;
     public bool jump;
     public bool sprint;
 
@@ -26,6 +27,9 @@ public class PlayerInputHandler2D : MonoBehaviour
         // Movement
         _inputActions.Player.Move.performed += OnMove;
         _inputActions.Player.Move.canceled += OnMove;
+
+        _inputActions.Player.Look.performed += OnLook;
+        _inputActions.Player.Look.canceled += OnLook;
 
         // Jump
         _inputActions.Player.Jump.started += OnJump;
@@ -61,6 +65,10 @@ public class PlayerInputHandler2D : MonoBehaviour
     private void OnMove(InputAction.CallbackContext ctx)
     {
         move = ctx.ReadValue<Vector2>();
+    }
+    private void OnLook(InputAction.CallbackContext ctx)
+    {
+        look = ctx.ReadValue<Vector2>();
     }
 
     private void OnJump(InputAction.CallbackContext ctx)    

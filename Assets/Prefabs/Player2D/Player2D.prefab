@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2391163507104350035}
   - component: {fileID: 8013761358515637130}
   - component: {fileID: 7498801707756309594}
+  - component: {fileID: 5935718652454100799}
   m_Layer: 4
   m_Name: Player2D
   m_TagString: Untagged
@@ -82,8 +83,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -976591009
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
@@ -136,6 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInputHandler2D
   move: {x: 0, y: 0}
+  look: {x: 0, y: 0}
   jump: 0
   sprint: 0
 --- !u!114 &8013761358515637130
@@ -164,7 +166,7 @@ MonoBehaviour:
   groundCheckSize: {x: 0.5, y: 0.2}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 64
 --- !u!70 &7498801707756309594
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -202,6 +204,29 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
+--- !u!114 &5935718652454100799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5177424840934152609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c94dd5c51f8d84c42925988e505876b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractHandler2D
+  detectionStartPoint: {fileID: 6364998416409571695}
+  detectionRadius: 0.5
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  currentInteractableObject: {fileID: 5177424840934152609}
+  enableInteraction: 1
+  inputHandler: {fileID: 0}
+  OnCurrentInteractableChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7227951644928659297
 GameObject:
   m_ObjectHideFlags: 0
