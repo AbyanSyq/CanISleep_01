@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 676600cdcdcdeaf42afc519ce3acbcfa
+guid: 46f771029000d764687b87df59265b36
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8360621857648827146
-    second: char_0
+      213: 7136478710510131982
+    second: Timeline 1_0001_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: char_0
+      name: Timeline 1_0001_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 259
-        height: 378
+        x: 6
+        y: 14
+        width: 280
+        height: 399
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6f4a97987ba19fb80800000000000000
-      internalID: -8360621857648827146
+      spriteID: e0b1817939dd90360800000000000000
+      internalID: 7136478710510131982
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      char_0: -8360621857648827146
+      Timeline 1_0001_0: 7136478710510131982
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
