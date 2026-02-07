@@ -37,6 +37,12 @@ public class Health : MonoBehaviour
             Die();
         }
     }
+    public void Revive()
+    {
+        isDead = false;
+        currentHealth = maxHealth;
+        onHealthChanged.Invoke(currentHealth, maxHealth);
+    }
 
     public void IncreaseHealth(float amount)
     {

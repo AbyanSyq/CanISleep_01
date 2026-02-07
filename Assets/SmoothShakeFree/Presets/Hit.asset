@@ -53,11 +53,7 @@ MonoBehaviour:
     noiseType: 1
     amplitude: {x: 0.3, y: 0.3, z: 0.3}
     frequency: {x: 0, y: 0, z: 0}
-    offset: {x: 0, y: 0, z: 0}
-    phase: {x: 0, y: 0, z: 0}
   rotationShake:
     noiseType: 0
     amplitude: {x: 0, y: 0, z: 0}
     frequency: {x: 0, y: 0, z: 0}
-    offset: {x: 0, y: 0, z: 0}
-    phase: {x: 0, y: 0, z: 0}

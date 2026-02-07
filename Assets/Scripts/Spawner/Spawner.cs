@@ -1,6 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
-
+public interface ISpawner
+{
+    void Spawn();
+}
 public class Spawner : MonoBehaviour
 {
     [Header("Player Spawn")]
@@ -10,32 +14,23 @@ public class Spawner : MonoBehaviour
     [Header("Enemy Spawn")]
     [SerializeField] private Transform enemySpawnPoint;
     [SerializeField] private Health enemyHealth;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void OnEnable()
-    {
-        GameplayManager.Instance.OnGameplayStart += Spawn;
-    }
 
-    void OnDisable()
-    {
-        GameplayManager.Instance.OnGameplayStart -= Spawn;
-    }
-
+    public List<GameObject> spawners = new();
     public void Spawn()
     {
-        if(playerHealth == null)
+        foreach (var spawner in spawners)
+        {
+            spawner.GetComponent<ISpawner>()?.Spawn();
+        }
+        if(playerHealth != null)
         {
             playerHealth.transform.position = playerSpawnPoint.position;
-            playerHealth.IncreaseHealth(playerHealth.MaxHealth);
-            Debug.LogWarning("PlayerHealth or EnemyHealth is not assigned in Spawner.");
-            return;
+            playerHealth.Revive();
         }
-        if(enemyHealth == null)
+        if(enemyHealth != null)
         {
             enemyHealth.transform.position = enemySpawnPoint.position;
             enemyHealth.IncreaseHealth(enemyHealth.MaxHealth);
-            Debug.LogWarning("PlayerHealth or EnemyHealth is not assigned in Spawner.");
-            return;
         }
     }
 

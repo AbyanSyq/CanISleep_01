@@ -9,7 +9,9 @@ public class TransitionManager : SingletonMonoBehaviour<TransitionManager> {
         base.Awake();
         DontDestroyOnLoad(gameObject);
     }
-
+    public void RestartScene(float delay = 0f) {
+        StartCoroutine(TransitionRoutine(SceneManager.GetActiveScene().name, delay));
+    }
     public void ChangeScene(SceneField scene) {
         StartCoroutine(TransitionRoutine(scene));
     }
@@ -22,7 +24,10 @@ public class TransitionManager : SingletonMonoBehaviour<TransitionManager> {
         ChangeScene(scene);
     }
 
-    private IEnumerator TransitionRoutine(string sceneName) {
+    private IEnumerator TransitionRoutine(string sceneName, float delay = 0f) {
+        if (delay > 0f) {
+            yield return new WaitForSecondsRealtime(delay);
+        }
         if (currentTransition != null) {
             // 1. Jalankan Animasi Keluar
             currentTransition.Show();

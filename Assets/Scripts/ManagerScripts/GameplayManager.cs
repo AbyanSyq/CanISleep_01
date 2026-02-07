@@ -7,6 +7,8 @@ public class GameplayManager : SingletonMonoBehaviour<GameplayManager>
     public float restartDelay = 2f;
     public MonologueSO monologueSO;
     public Spawner spawner;
+
+    public bool isRestartSceneWhenPlayerDie = true;
  
     
     public event Action OnGameplayStart;
@@ -23,6 +25,11 @@ public class GameplayManager : SingletonMonoBehaviour<GameplayManager>
     }
     public void HandlePlayerDeath()
     {
+        if (isRestartSceneWhenPlayerDie)
+        {
+            TransitionManager.Instance.RestartScene(restartDelay);
+            return;
+        }
         Debug.Log("Handling player death in GameplayManager.");
         Invoke(nameof(StartGameplay), restartDelay); // Delay sebelum restart level
     }
