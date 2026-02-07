@@ -1388,10 +1388,6 @@ PrefabInstance:
       propertyPath: monologueSO
       value: 
       objectReference: {fileID: 11400000, guid: 25ceec78fd9cb7e4fa3ce50b32fa1f1f, type: 2}
-    - target: {fileID: 3036245720058023683, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
-      propertyPath: openingMonologue
-      value: 
-      objectReference: {fileID: 11400000, guid: 25ceec78fd9cb7e4fa3ce50b32fa1f1f, type: 2}
     - target: {fileID: 6046424042712951304, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
       propertyPath: m_Name
       value: GameplayManager
@@ -1590,7 +1586,6 @@ MonoBehaviour:
   targetScene:
     m_SceneAsset: {fileID: 102900000, guid: d7c8df70c3aaa134ab9fec5a60c045a8, type: 3}
     m_SceneName: Dummy2
-  delayBeforeTransition: 0
 --- !u!4 &1786591570 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5376589701037483171, guid: 32e3eef5d07e88f4cb247be6b5912553, type: 3}

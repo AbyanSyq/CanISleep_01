@@ -16,7 +16,7 @@ MonoBehaviour:
   - type: 0
     icon: {fileID: 21300000, guid: 96b7de67ae40b9e4dbf53cfbb4d199ed, type: 3}
     displayDuration: 2
-    text: Oh heyy there little guy!!!
+    text: Oh heyy little guy!!!
   - type: 0
     icon: {fileID: 21300000, guid: 841aa2124e62351478a0abbcb3f0feab, type: 3}
     displayDuration: 2

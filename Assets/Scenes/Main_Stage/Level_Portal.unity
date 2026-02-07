@@ -1834,9 +1834,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TransitionHandler
   targetScene:
-    m_SceneAsset: {fileID: 102900000, guid: 0233dd9388988d44c87d624e79687139, type: 3}
-    m_SceneName: Level_Corpse
-  delayBeforeTransition: 0
+    m_SceneAsset: {fileID: 102900000, guid: d7c8df70c3aaa134ab9fec5a60c045a8, type: 3}
+    m_SceneName: Dummy2
 --- !u!1001 &1753033835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1887,10 +1886,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3036245720058023683, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
       propertyPath: monologueSO
-      value: 
-      objectReference: {fileID: 11400000, guid: e424be376937dfe45a28802c248fafdf, type: 2}
-    - target: {fileID: 3036245720058023683, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
-      propertyPath: openingMonologue
       value: 
       objectReference: {fileID: 11400000, guid: e424be376937dfe45a28802c248fafdf, type: 2}
     - target: {fileID: 6046424042712951304, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}

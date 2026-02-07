@@ -43,10 +43,7 @@ public class GameplayManager : SingletonMonoBehaviour<GameplayManager>
         // 3. Mulai Monolog
         // NOTE: Kita butuh callback (Action) agar tahu kapan monolog selesai.
         // Pastikan script MonologueManager kamu support parameter kedua: PlayMonologue(SO, Action onComplete)
-        if(openingMonologue != null)
-            MonologueManager.Instance.PlayMonologue(openingMonologue, OnMonologueFinished);
-        else
-            OnMonologueFinished();
+        MonologueManager.Instance.PlayMonologue(openingMonologue, OnMonologueFinished);
     }
 
     private void OnMonologueFinished()
