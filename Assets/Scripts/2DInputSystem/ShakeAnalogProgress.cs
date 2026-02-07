@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using Ami.BroAudio;
 public static class ShakeAnalogProgressEvents
 {
     public static Action OnShakeProgressComplete;
@@ -16,13 +17,19 @@ public class ShakeAnalogProgress : MonoBehaviour
     [SerializeField] private string animationParameterIsCompleteTrigger = "IsComplete";
     [SerializeField] private PlayerInputHandler2D inputHandler;
 
+    [Header("Audio")]
+    public SoundID progressingAudio;
+    public SoundID idleAudio;
+
+    private bool _lastProgressState;
+
     [Header("Settings")]
     [Range(0, 1)] public float progress = 0f;
     public bool isProgressing = false;
     [Tooltip("Sensitivitas gerakan. Semakin besar, semakin cepat penuh.")]
     public float sensitivity = 0.5f;
-    public float decayRate = 0.1f; 
-    
+    public float decayRate = 0.1f;
+
     [Tooltip("Batas minimal analog dianggap bergerak (untuk menghindari drift)")]
     public float deadzone = 0.1f;
 
@@ -60,7 +67,9 @@ public class ShakeAnalogProgress : MonoBehaviour
             StopVibration();
         }
 
-        
+        HandleProgressAudio();
+
+
         ShakeAnalogProgressEvents.OnShakeProgressUpdate?.Invoke(progress);
 
         // Simpan posisi input untuk dibandingkan di frame berikutnya
@@ -84,7 +93,7 @@ public class ShakeAnalogProgress : MonoBehaviour
         // Gabungkan pergerakan kedua analog
         // Pemain bisa menggerakkan satu atau keduanya, keduanya akan menambah progres
         float totalMovement = (moveDelta + lookDelta) * sensitivity * Time.deltaTime;
-        
+
         progress += totalMovement;
         progress = Mathf.Clamp01(progress);
 
@@ -127,4 +136,25 @@ public class ShakeAnalogProgress : MonoBehaviour
         var gamepad = Gamepad.current;
         if (gamepad != null) gamepad.SetMotorSpeeds(0f, 0f);
     }
+
+    private void HandleProgressAudio()
+    {
+        // Kalau state berubah baru play sound
+        if (_lastProgressState != isProgressing)
+        {
+            if (isProgressing)
+            {
+                // Audio A
+                BroAudio.Play(progressingAudio);
+            }
+            else
+            {
+                // Audio B
+                BroAudio.Play(idleAudio);
+            }
+
+            _lastProgressState = isProgressing;
+        }
+    }
+
 }

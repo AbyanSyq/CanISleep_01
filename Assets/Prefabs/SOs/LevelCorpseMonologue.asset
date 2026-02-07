@@ -14,19 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MonologueSO
   monologueDataList:
   - type: 0
-    icon: {fileID: 21300000, guid: cf243899369a29446ad9158908332012, type: 3}
-    displayDuration: 2
-    text: aosidfoaudhfipauhdfpouahdofiuh
-  - type: 0
     icon: {fileID: 21300000, guid: 96b7de67ae40b9e4dbf53cfbb4d199ed, type: 3}
-    displayDuration: 5
-    text: afuoaydfoaugsgdfiuh
-  - type: 0
-    icon: {fileID: 21300000, guid: 841aa2124e62351478a0abbcb3f0feab, type: 3}
-    displayDuration: 5
-    text: afuoaydfoaugsgdfiuh
+    displayDuration: 2
+    text: Okay, that was unexpected
   - type: 0
     icon: {fileID: 21300000, guid: 9e1c23cf511c631429105cb240005479, type: 3}
     displayDuration: 5
-    text: afuoaydfoaugsgdfiuh
+    text: It won't happen again the second time right?
+  - type: 0
+    icon: {fileID: 21300000, guid: 9e1c23cf511c631429105cb240005479, type: 3}
+    displayDuration: 5
+    text: I never intended to spread misinformation to you
+  - type: 0
+    icon: {fileID: 21300000, guid: cf243899369a29446ad9158908332012, type: 3}
+    displayDuration: 5
+    text: Look, im sorry. It won't happen again I swear
+  - type: 0
+    icon: {fileID: 21300000, guid: 841aa2124e62351478a0abbcb3f0feab, type: 3}
+    displayDuration: 5
+    text: You won't forgive me do you?
+  - type: 0
+    icon: {fileID: 21300000, guid: cf243899369a29446ad9158908332012, type: 3}
+    displayDuration: 5
+    text: Listen. In life, If you make mistake, you can't turn back the time to fix
+      your mistake
   intervalBetweenTexts: 1

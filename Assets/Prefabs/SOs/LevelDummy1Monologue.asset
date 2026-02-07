@@ -14,11 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MonologueSO
   monologueDataList:
   - type: 0
-    icon: {fileID: 0}
+    icon: {fileID: 21300000, guid: 841aa2124e62351478a0abbcb3f0feab, type: 3}
     displayDuration: 2
     text: This world is full of spike, but don't worry, they wont hurt a bit
-  - type: 1
-    icon: {fileID: 0}
-    displayDuration: 2
-    text: Oops, I don't think that such a spike will kill you
   intervalBetweenTexts: 1

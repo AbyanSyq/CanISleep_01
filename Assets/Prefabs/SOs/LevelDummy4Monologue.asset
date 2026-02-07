@@ -10,11 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e991ca9d2843f841861e8685e263653, type: 3}
-  m_Name: LevelDummy3Monologue
+  m_Name: LevelDummy4Monologue
   m_EditorClassIdentifier: Assembly-CSharp::MonologueSO
   monologueDataList:
   - type: 0
+    icon: {fileID: 21300000, guid: 96b7de67ae40b9e4dbf53cfbb4d199ed, type: 3}
+    displayDuration: 2
+    text: Oh heyy little guy!!!
+  - type: 0
+    icon: {fileID: 21300000, guid: 841aa2124e62351478a0abbcb3f0feab, type: 3}
+    displayDuration: 2
+    text: You're so adorable, I can't!!!!!
+  - type: 0
     icon: {fileID: 21300000, guid: 9e1c23cf511c631429105cb240005479, type: 3}
     displayDuration: 2
-    text: I don't think you'll survive that jump
+    text: Maybe you should try approaching it
   intervalBetweenTexts: 1
