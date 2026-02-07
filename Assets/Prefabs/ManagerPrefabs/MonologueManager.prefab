@@ -149,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MonologueManager
   uiMonologue: {fileID: 3562354329706439031}
   isPlaying: 0
-  time: 0
+  skipRequested: 0
 --- !u!1001 &4181158087542824174
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -51,11 +51,15 @@ public class DayToNight : MonoBehaviour
         // --- 1. Rotasi Matahari/Bulan ---
         // InverseLerp mengubah range [rotationStart, rotationEnd] menjadi [0, 1]
         float rotationT = Mathf.InverseLerp(rotationStart, rotationEnd, t);
-        sunAndMoonTransform.rotation = Quaternion.Lerp(
-            Quaternion.Euler(dayRotation), 
-            Quaternion.Euler(nightRotation), 
-            rotationT
-        );
+
+// Ambil rotasi saat ini
+        Vector3 angles = sunAndMoonTransform.localEulerAngles;
+
+        // Hanya ganti Z
+        angles.z = Mathf.LerpUnclamped(dayRotation.z, nightRotation.z, rotationT);
+
+        // Masukkan kembali
+        sunAndMoonTransform.localEulerAngles = angles;
 
         // --- 2. Warna Langit ---
         float skyT = Mathf.InverseLerp(skyColorStart, skyColorEnd, t);
