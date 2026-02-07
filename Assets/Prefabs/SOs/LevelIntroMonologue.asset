@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e991ca9d2843f841861e8685e263653, type: 3}
+  m_Name: LevelIntroMonologue
+  m_EditorClassIdentifier: Assembly-CSharp::MonologueSO
+  monologueDataList:
+  - type: 0
+    icon: {fileID: 0}
+    displayDuration: 2
+    text: Hey!!! you are not supposed to be here
+  - type: 0
+    icon: {fileID: 0}
+    displayDuration: 2
+    text: Don't worry, I can help you get out of here
+  - type: 0
+    icon: {fileID: 0}
+    displayDuration: 2
+    text: Just walk straight to the left and you'll be fine
+  - type: 0
+    icon: {fileID: 0}
+    displayDuration: 2
+    text: Oh, My name is Fico
+  - type: 0
+    icon: {fileID: 0}
+    displayDuration: 2
+    text: Ehhhhh, I mean Pinochoco. Nice to meet You
+  - type: 0
+    icon: {fileID: 0}
+    displayDuration: 2
+    text: Don't talk much aren't you? fine just go to the left
+  intervalBetweenTexts: 1
