@@ -62,8 +62,8 @@ public class TakeDamageHandler : MonoBehaviour, IDamageable
 
         // Flash Effect menggunakan DOTween
         spriteRenderer.DOColor(flashColor, 0.05f)
-            .SetLoops(2, LoopType.Yoyo)
-            .SetEase(Ease.InOutQuad);
+            .SetLoops(4, LoopType.Yoyo)
+            .SetEase(Ease.InOutQuad).SetUpdate(true);
     }
 
     private void PlayDamageSound()
