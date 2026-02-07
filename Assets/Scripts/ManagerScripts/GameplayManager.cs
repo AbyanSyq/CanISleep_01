@@ -33,7 +33,7 @@ public class GameplayManager : SingletonMonoBehaviour<GameplayManager>
     public void RestartGameplay()
     {
         OnGameplayRestart?.Invoke();
-
+        spawner.Spawn();    
         MonologueManager.Instance.PlayMonologue(monologueSO);
         
     }
@@ -55,6 +55,6 @@ public class GameplayManager : SingletonMonoBehaviour<GameplayManager>
         // yield return new WaitForSecondsRealtime(delay/2);
         // Time.timeScale = 1f;
         yield return new WaitForSecondsRealtime(delay);
-        StartGameplay();
+        RestartGameplay();
     }
 }
