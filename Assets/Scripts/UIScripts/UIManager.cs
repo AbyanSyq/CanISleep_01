@@ -31,7 +31,8 @@ public enum UIType
     NONE = -1,
     MAINMENU,
     GAMEPLAY,
-    PAUSEMENU
+    PAUSEMENU,
+    GAMEPLAYMAINMENU
 }
 
 public class UIManager : SingletonMonoBehaviour<UIManager>
