@@ -1,7 +1,8 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(PlayerInputHandler2D))] // Memastikan input handler ada
+[RequireComponent(typeof(PlayerInputHandler2D))]
+[RequireComponent(typeof(Animator))] // Menambahkan requirement Animator
 public class PlayerController2D : MonoBehaviour
 {
     [Header("Movement Settings")]
@@ -12,9 +13,9 @@ public class PlayerController2D : MonoBehaviour
 
     [Header("Jump Settings")]
     [SerializeField] private float jumpForce = 14f;
-    [SerializeField] private float jumpCutMultiplier = 0.5f; // Pengurangan gaya saat tombol dilepas
-    [SerializeField] private float coyoteTime = 0.1f; // Waktu toleransi jatuh
-    [SerializeField] private float jumpBufferTime = 0.1f; // Waktu toleransi tekan tombol sebelum mendarat
+    [SerializeField] private float jumpCutMultiplier = 0.5f;
+    [SerializeField] private float coyoteTime = 0.1f;
+    [SerializeField] private float jumpBufferTime = 0.1f;
     [SerializeField] private float gravityScale = 3f;
     [SerializeField] private float fallGravityMultiplier = 1.5f;
 
@@ -23,9 +24,16 @@ public class PlayerController2D : MonoBehaviour
     [SerializeField] private Vector2 groundCheckSize = new Vector2(0.5f, 0.2f);
     [SerializeField] private LayerMask groundLayer;
 
+    [Header("Animation Settings")]
+    [SerializeField] private string yVelocityFloatName = "yVelocity";
+    [SerializeField] private string isGroundedBoolName = "isGrounded";
+    [SerializeField] private string speedFloatName = "speed";
+
+
     // References
     private Rigidbody2D rb;
     private PlayerInputHandler2D input;
+    private Animator anim; // Referensi Animator
 
     // State Variables
     private bool isGrounded;
@@ -39,23 +47,24 @@ public class PlayerController2D : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         input = GetComponent<PlayerInputHandler2D>();
+        anim = GetComponent<Animator>(); // Ambil komponen Animator
     }
 
     private void Update()
     {
-        // Update Logic & Timers di sini (Frame dependent)
         UpdateTimers();
         CheckInputLogic();
         UpdateGravityScale();
+        
+        // Panggil fungsi animasi setiap frame
+        UpdateAnimationState();
     }
 
     private void FixedUpdate()
     {
-        // Update Physics di sini (Fixed time step)
         CheckGround();
         Move();
         
-        // Handle Jump Execution in Physics step for consistency
         if (jumpBufferCounter > 0f && coyoteTimeCounter > 0f)
         {
             Jump();
@@ -66,21 +75,13 @@ public class PlayerController2D : MonoBehaviour
 
     private void Move()
     {
-        // 1. Hitung target kecepatan
         float targetSpeed = input.move.x * moveSpeed;
-
-        // 2. Hitung selisih kecepatan (force yang dibutuhkan)
-        float speedDif = targetSpeed - rb.linearVelocity.x; // Unity 6 pakai linearVelocity, Unity lama pakai velocity
-
-        // 3. Tentukan rate akselerasi vs deselerasi
+        float speedDif = targetSpeed - rb.linearVelocity.x; 
         float accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? acceleration : deceleration;
-
-        // 4. Aplikasikan movement force
         float movement = Mathf.Pow(Mathf.Abs(speedDif) * accelRate, velPower) * Mathf.Sign(speedDif);
 
         rb.AddForce(movement * Vector2.right);
 
-        // 5. Flip Visual
         if (input.move.x != 0)
         {
             CheckFlip(input.move.x > 0);
@@ -104,7 +105,6 @@ public class PlayerController2D : MonoBehaviour
 
     private void UpdateTimers()
     {
-        // Coyote Time
         if (isGrounded)
         {
             coyoteTimeCounter = coyoteTime;
@@ -114,20 +114,9 @@ public class PlayerController2D : MonoBehaviour
             coyoteTimeCounter -= Time.deltaTime;
         }
 
-        // Jump Buffer
-        if (input.jump) // Input 'jump' dari handler bernilai true saat ditekan
+        if (input.jump) 
         {
-            // Karena Input System event-based, kita butuh trigger manual
-            // Logika ini asumsi input.jump jadi true sesaat (bisa dimodifikasi di handler)
-            // Atau kita bisa pakai event based langsung.
-            // Untuk simplifikasi dengan handler yang ada, kita cek state:
-             
-             // NOTE: Idealnya Jump Buffer di-set saat event 'started', tapi di sini kita pakai state check
-             // Kita perlu mereset input jump di handler atau mendeteksi 'press' baru.
-             // Agar simpel, mari kita anggap handler memberikan state "IsPressed".
-             
-             // Hack kecil agar buffer jalan dengan state bool:
-             jumpBufferCounter = jumpBufferTime;
+            jumpBufferCounter = jumpBufferTime;
         }
         else
         {
@@ -135,12 +124,8 @@ public class PlayerController2D : MonoBehaviour
         }
     }
     
-    // Modifikasi kecil: Kita butuh trigger "OnJump" dari handler sebenarnya lebih baik daripada bool state.
-    // Tapi karena kamu pakai bool di handler, kita adaptasi:
     private void CheckInputLogic()
     {
-        // Cut Jump (Variable Height)
-        // Jika tombol dilepas saat sedang naik, potong kecepatan vertikal
         if (!input.jump && rb.linearVelocity.y > 0)
         {
              rb.AddForce(Vector2.down * rb.linearVelocity.y * (1 - jumpCutMultiplier), ForceMode2D.Impulse);
@@ -149,16 +134,19 @@ public class PlayerController2D : MonoBehaviour
 
     private void Jump()
     {
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0); // Reset y velocity agar lompatan konsisten
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 
-        jumpBufferCounter = 0; // Reset buffer
-        coyoteTimeCounter = 0; // Reset coyote (agar tidak bisa double jump di udara)
+        jumpBufferCounter = 0;
+        coyoteTimeCounter = 0;
+
+        // --- ANIMATION TRIGGER ---
+        // Memicu animasi lompat seketika
+        anim.SetTrigger("jump"); 
     }
 
     private void UpdateGravityScale()
     {
-        // Membuat jatuh terasa lebih "berat" dan cepat dibanding saat naik
         if (rb.linearVelocity.y < 0)
         {
             rb.gravityScale = gravityScale * fallGravityMultiplier;
@@ -185,6 +173,26 @@ public class PlayerController2D : MonoBehaviour
             Gizmos.color = Color.red;
             Gizmos.DrawWireCube(groundCheck.position, groundCheckSize);
         }
+    }
+
+    #endregion
+
+    #region Animation Logic
+
+    private void UpdateAnimationState()
+    {
+        // 1. Mengirim status Grounded
+        // Digunakan untuk transisi dari Any State -> Land, atau Jump -> Fall -> Land
+        anim.SetBool(isGroundedBoolName, isGrounded);
+
+        // 2. Mengirim Kecepatan Horizontal (Speed)
+        // Gunakan Mathf.Abs agar nilainya selalu positif (0 sampai max speed)
+        // Ini untuk Blend Tree: Idle (0) -> Walk (misal 2) -> Run (misal 8)
+        anim.SetFloat(speedFloatName, Mathf.Abs(rb.linearVelocity.x));
+
+        // 3. Mengirim Kecepatan Vertikal (yVelocity)
+        // Berguna untuk membedakan animasi 'Naik' (Jump Up) dan 'Turun' (Fall)
+        anim.SetFloat(yVelocityFloatName, rb.linearVelocity.y);
     }
 
     #endregion

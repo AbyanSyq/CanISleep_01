@@ -1160,7 +1160,7 @@ MonoBehaviour:
   inputHandler: {fileID: 1798288116}
   progress: 0
   isProgressing: 0
-  sensitivity: 0.5
+  sensitivity: 0.4
   decayRate: 0.01
   deadzone: 0.1
   useVibration: 0

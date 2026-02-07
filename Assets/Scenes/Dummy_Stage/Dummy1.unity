@@ -1336,6 +1336,63 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &1649216840
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2244933909850918374, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -19.88922
+      objectReference: {fileID: 0}
+    - target: {fileID: 2244933909850918374, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.04967
+      objectReference: {fileID: 0}
+    - target: {fileID: 2244933909850918374, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2244933909850918374, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2244933909850918374, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2244933909850918374, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2244933909850918374, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2244933909850918374, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2244933909850918374, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2244933909850918374, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6046424042712951304, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
+      propertyPath: m_Name
+      value: GameplayManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
 --- !u!1 &1668928715
 GameObject:
   m_ObjectHideFlags: 0
@@ -1773,7 +1830,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0.7391248, b: 1, a: 0}
+  m_BackGroundColor: {r: 0.81568635, g: 0.9058824, b: 0.854902, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1798,7 +1855,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 9
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1823,7 +1880,7 @@ Transform:
   m_GameObject: {fileID: 2002088460}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.3141203, y: 3.6, z: -10}
+  m_LocalPosition: {x: -14.158564, y: 1.9999995, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2146,11 +2203,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7489835257971574341, guid: dc78bbe9e4b1ab44482d224adcadc574, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.3141203
+      value: -14.158564
       objectReference: {fileID: 0}
     - target: {fileID: 7489835257971574341, guid: dc78bbe9e4b1ab44482d224adcadc574, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.6
+      value: 1.9999995
       objectReference: {fileID: 0}
     - target: {fileID: 7489835257971574341, guid: dc78bbe9e4b1ab44482d224adcadc574, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2264,3 +2321,4 @@ SceneRoots:
   - {fileID: 1965467915}
   - {fileID: 1383364058}
   - {fileID: 1435650611}
+  - {fileID: 1649216840}

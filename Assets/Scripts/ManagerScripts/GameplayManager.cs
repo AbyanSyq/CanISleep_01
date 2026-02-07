@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,6 +10,9 @@ public class GameplayManager : SingletonMonoBehaviour<GameplayManager>
     public Spawner spawner;
 
     public bool isRestartSceneWhenPlayerDie = true;
+
+    [Header("Player")]
+    public PlayerInputHandler2D playerInputHandler;
  
     
     public event Action OnGameplayStart;
