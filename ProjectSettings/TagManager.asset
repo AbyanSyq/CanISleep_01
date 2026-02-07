@@ -44,14 +44,14 @@ TagManager:
   - name: Background
     uniqueID: 1691232833
     locked: 0
-  - name: Player
-    uniqueID: 3318376287
+  - name: Ground
+    uniqueID: 1423471727
     locked: 0
   - name: Obstacle
     uniqueID: 290365125
     locked: 0
-  - name: Ground
-    uniqueID: 1423471727
+  - name: Player
+    uniqueID: 3318376287
     locked: 0
   m_RenderingLayers:
   - Default

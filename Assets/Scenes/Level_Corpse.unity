@@ -352,51 +352,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CorpseGenerator
   corpsePrefab: {fileID: 7253937788868658042, guid: e370c3c4ea77d66488ef4aa08b13e30b, type: 3}
---- !u!1 &1078373220
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1078373221}
-  - component: {fileID: 1078373222}
-  m_Layer: 0
-  m_Name: GameplayManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1078373221
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1078373220}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1078373222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1078373220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62f0dff9bbc99e249a424ea01fbd1d50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameplayManager
-  monologueSO: {fileID: 11400000, guid: 69fc1489c07b5974cb5395c492579580, type: 2}
 --- !u!1 &1312339713
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,6 +650,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 470891159}
     m_Modifications:
+    - target: {fileID: 1678925272471700684, guid: 8c0d7d9a52207f04186f9c2dfd46bcc0, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1934680245}
     - target: {fileID: 5177424840934152609, guid: 8c0d7d9a52207f04186f9c2dfd46bcc0, type: 3}
       propertyPath: m_Name
       value: Player2D
@@ -745,25 +704,11 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5177424840934152609, guid: 8c0d7d9a52207f04186f9c2dfd46bcc0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1934680243}
-    - targetCorrespondingSourceObject: {fileID: 5177424840934152609, guid: 8c0d7d9a52207f04186f9c2dfd46bcc0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1934680244}
-    - targetCorrespondingSourceObject: {fileID: 5177424840934152609, guid: 8c0d7d9a52207f04186f9c2dfd46bcc0, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1934680245}
-    - targetCorrespondingSourceObject: {fileID: 5177424840934152609, guid: 8c0d7d9a52207f04186f9c2dfd46bcc0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1934680251}
   m_SourcePrefab: {fileID: 100100000, guid: 8c0d7d9a52207f04186f9c2dfd46bcc0, type: 3}
 --- !u!4 &1934680239 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6364998416409571695, guid: 8c0d7d9a52207f04186f9c2dfd46bcc0, type: 3}
-  m_PrefabInstance: {fileID: 1934680238}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &1934680240 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 3357142707000821539, guid: 8c0d7d9a52207f04186f9c2dfd46bcc0, type: 3}
   m_PrefabInstance: {fileID: 1934680238}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1934680241 stripped
@@ -771,90 +716,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5177424840934152609, guid: 8c0d7d9a52207f04186f9c2dfd46bcc0, type: 3}
   m_PrefabInstance: {fileID: 1934680238}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1934680243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934680241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fbdc324314326c4fa8fea5873e6a1e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TakeDamageHandler
-  healthComponent: {fileID: 1934680251}
-  damageMultiplier: 1
-  damageReduction: 15
-  spriteRenderer: {fileID: 1934680240}
-  flashColor: {r: 1, g: 0, b: 0, a: 1}
-  Damage_Sound:
-    ID: 0
-    _sourceAsset: {fileID: 0}
-    <DebugObject>k__BackingField: {fileID: 1934680241}
-  OnTakeDamageEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1934680244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934680241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd438dd108a0f284aa931a2da434f1d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCollisionImpulseSource
-  ImpulseDefinition:
-    ImpulseChannel: 1
-    ImpulseShape: 0
-    CustomImpulseShape:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    ImpulseDuration: 0.2
-    ImpulseType: 3
-    DissipationRate: 0
-    RawSignal: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
-    AmplitudeGain: 1
-    FrequencyGain: 1
-    RepeatMode: 0
-    Randomize: 1
-    TimeEnvelope:
-      AttackShape:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      DecayShape:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      AttackTime: 0
-      SustainTime: 0.2
-      DecayTime: 0.7
-      ScaleWithImpact: 1
-      HoldForever: 0
-    ImpactRadius: 100
-    DirectionMode: 0
-    DissipationMode: 2
-    DissipationDistance: 100
-    PropagationSpeed: 343
-  DefaultVelocity: {x: 0, y: -1, z: 0}
-  LayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  IgnoreTag: 
-  UseImpactDirection: 0
-  ScaleImpactWithMass: 0
-  ScaleImpactWithSpeed: 0
 --- !u!114 &1934680245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -868,38 +729,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CorpseSpawnHandler
   playerTransform: {fileID: 1934680239}
---- !u!114 &1934680251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934680241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a753144b1cadb7b4e9f6b0738cb6f9c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Health
-  maxHealth: 10
-  currentHealth: 0
-  onHealthChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  onDeath:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1934680245}
-        m_TargetAssemblyTypeName: CorpseSpawnHandler, Assembly-CSharp
-        m_MethodName: SpawnCorpseAtPosition
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &2002088460
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,6 +899,63 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1001 &5309672082398038292
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2244933909850918374, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2244933909850918374, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2244933909850918374, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2244933909850918374, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2244933909850918374, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2244933909850918374, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2244933909850918374, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2244933909850918374, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2244933909850918374, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2244933909850918374, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6046424042712951304, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
+      propertyPath: m_Name
+      value: GameplayManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1079,5 +965,5 @@ SceneRoots:
   - {fileID: 864985538}
   - {fileID: 1340084894}
   - {fileID: 470891159}
-  - {fileID: 1078373221}
+  - {fileID: 5309672082398038292}
   - {fileID: 820237384}
