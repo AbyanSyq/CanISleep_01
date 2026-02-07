@@ -19,7 +19,7 @@ public class RotationPuzzleHandler : MonoBehaviour
     [Range(0, 1)] public float vibrationIntensity = 0.2f;
 
     [Header("Rotation Direction")]
-public bool clockwiseOnly = true;
+    public bool clockwiseOnly = true;
 
     private float _lastAngle = 0f;
     private bool _isFirstTouch = true;

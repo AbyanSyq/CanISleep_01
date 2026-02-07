@@ -25,12 +25,17 @@ public class UIGameplayMainMenu : UIBase
         if (progressBar != null)
         {
             progressBar.fillAmount = progress;
-            if(progress > 0f)
+            if(progress > 0f && progress < 1f)
             {
                 StartCoroutine(SetProgressBarUI(true));
             }else if(progress <= 0f)
             {
                 StartCoroutine(SetProgressBarUI(false, 0.5f));
+            }
+            
+            if(progress >= 0.99f)
+            {
+                StartCoroutine(SetProgressBarUI(false));
             }
         }
     }

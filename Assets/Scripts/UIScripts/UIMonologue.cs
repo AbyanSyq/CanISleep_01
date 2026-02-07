@@ -1,14 +1,14 @@
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI; // Tambahkan untuk Image
+using UnityEngine.UI; 
 using System.Collections;
 using Ami.BroAudio;
 
 public class UIMonologue : UIBase
 {
     [SerializeField] private UIBase uiText;
-    [SerializeField] private Image speakerIcon; // Untuk menampung icon dari textData
+    [SerializeField] private Image speakerIcon; 
     [SerializeField] private TextMeshProUGUI monologueText;
 
     [Header("Audio")]
@@ -16,7 +16,7 @@ public class UIMonologue : UIBase
     public float pitchMin = 0.9f;
     public float pitchMax = 1.1f;
     float nextSoundTime = 0f;
-    float interval = 0.02f;
+    float interval = 0.05f; // Sedikit diperlambat agar tidak spamming
 
     [Header("Typing Settings")]
     public float typingSpeed = 0.03f;
@@ -26,15 +26,15 @@ public class UIMonologue : UIBase
 
     public void OnMonologueLoad(MonologueTextData data)
     {
-        if (typingRoutine != null)
-            StopCoroutine(typingRoutine);
+        if (typingRoutine != null) StopCoroutine(typingRoutine);
 
         // Update UI Elements
         if (speakerIcon != null) speakerIcon.sprite = data.icon;
         if (uiText != null) uiText.Show();
+        
         typingRoutine = StartCoroutine(TypeMonologue(data.text));
 
-        Debug.Log($"Displaying Monologue: {data.type}");
+        // Debug.Log($"Displaying Monologue: {data.type}");
     }
 
     private IEnumerator TypeMonologue(string fullText)
@@ -42,16 +42,15 @@ public class UIMonologue : UIBase
         isTyping = true;
         monologueText.text = "";
 
-        foreach (char c in fullText)
+        // Loop per karakter
+        for (int i = 0; i < fullText.Length; i++)
         {
-            monologueText.text += c;
+            monologueText.text += fullText[i];
 
-            // PLAY SOUND hanya huruf & angka (biar natural)
-            if (char.IsLetterOrDigit(c) && Time.unscaledTime >= nextSoundTime)
+            // Play Sound Logic
+            if (char.IsLetterOrDigit(fullText[i]) && Time.unscaledTime >= nextSoundTime)
             {
-                BroAudio.Play(dialogBlipID)
-                        .SetPitch(Random.Range(pitchMin, pitchMax));
-
+                BroAudio.Play(dialogBlipID).SetPitch(UnityEngine.Random.Range(pitchMin, pitchMax));
                 nextSoundTime = Time.unscaledTime + interval;
             }
 
@@ -63,17 +62,19 @@ public class UIMonologue : UIBase
 
     public void HideUIText()
     {
-        if (uiText != null)
-            uiText.Hide();
+        if (uiText != null) uiText.Hide();
     }
 
-    // Optional: Jika ingin skip animasi ketik
+    // Fungsi untuk menampilkan teks secara instan
     public void SkipTyping(string fullText)
     {
-        if (!isTyping) return;
-
-        StopCoroutine(typingRoutine);
+        // Hentikan proses mengetik
+        if (typingRoutine != null) StopCoroutine(typingRoutine);
+        
+        // Tampilkan full text langsung
         monologueText.text = fullText;
+        
+        // Update status
         isTyping = false;
     }
 }

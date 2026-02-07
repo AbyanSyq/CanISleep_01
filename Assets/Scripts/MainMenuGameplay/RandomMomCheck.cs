@@ -14,6 +14,8 @@ public class RamdomMomCheck : MonoBehaviour
     public float minActiveDuration = 1f; // Berapa lama object aktif
     public float maxActiveDuration = 2f;
 
+    public bool isMomCheckActive = false;
+
     private void Start()
     {
         foreach (var obj in targetObjectActive) obj.SetActive(false);
@@ -66,12 +68,14 @@ public class RamdomMomCheck : MonoBehaviour
 
     void ActivateAll()
     {
+        isMomCheckActive = true;
         foreach (var obj in targetObjectActive) obj.SetActive(true);
         foreach (var obj in targetObjectDeactive) obj.SetActive(false);
     }
 
     void DeactivateAll()
     {
+        isMomCheckActive = false;
         foreach (var obj in targetObjectActive) obj.SetActive(false);
         foreach (var obj in targetObjectDeactive) obj.SetActive(true);
     }

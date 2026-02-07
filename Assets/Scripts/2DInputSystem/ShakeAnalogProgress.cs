@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using Ami.BroAudio;
+using UnityEngine.Rendering;
 public static class ShakeAnalogProgressEvents
 {
     public static Action OnShakeProgressComplete;
@@ -18,6 +19,7 @@ public class ShakeAnalogProgress : MonoBehaviour
     [SerializeField] private PlayerInputHandler2D inputHandler;
 
     [Header("Audio")]
+    private IAudioPlayer currentAudioPlayer;
     public SoundID progressingAudio;
     public SoundID idleAudio;
 
@@ -41,6 +43,7 @@ public class ShakeAnalogProgress : MonoBehaviour
     private Vector2 _lastLookInput;
 
     public UnityEvent OnProgressComplete;
+    public UnityEvent OnFoundedByMom;
 
     private void Update()
     {
@@ -90,12 +93,20 @@ public class ShakeAnalogProgress : MonoBehaviour
 
     private void ProcessShake(float moveDelta, float lookDelta)
     {
+        if (FindFirstObjectByType<RamdomMomCheck>().isMomCheckActive)
+        {
+            progress = 0f;
+            OnFoundedByMom?.Invoke();
+            return;
+        }
         // Gabungkan pergerakan kedua analog
         // Pemain bisa menggerakkan satu atau keduanya, keduanya akan menambah progres
         float totalMovement = (moveDelta + lookDelta) * sensitivity * Time.deltaTime;
 
         progress += totalMovement;
         progress = Mathf.Clamp01(progress);
+
+
 
         if (progress >= 1f)
         {
@@ -145,12 +156,14 @@ public class ShakeAnalogProgress : MonoBehaviour
             if (isProgressing)
             {
                 // Audio A
-                BroAudio.Play(progressingAudio);
+                currentAudioPlayer?.Stop();
+                currentAudioPlayer = BroAudio.Play(progressingAudio,0);
             }
             else
             {
                 // Audio B
-                BroAudio.Play(idleAudio);
+                currentAudioPlayer?.Stop();
+                currentAudioPlayer = BroAudio.Play(idleAudio,0);
             }
 
             _lastProgressState = isProgressing;

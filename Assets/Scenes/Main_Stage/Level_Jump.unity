@@ -546,6 +546,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4003303352164367800, guid: feef98d505007bf40b06ff5745c0a76d, type: 3}
   m_PrefabInstance: {fileID: 602351148}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &603242477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5177424840934152609, guid: 8c0d7d9a52207f04186f9c2dfd46bcc0, type: 3}
+  m_PrefabInstance: {fileID: 1934680238}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &626314068 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4003303352164367800, guid: feef98d505007bf40b06ff5745c0a76d, type: 3}
@@ -1514,7 +1519,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6364998416409571695, guid: 8c0d7d9a52207f04186f9c2dfd46bcc0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1491400398}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5177424840934152609, guid: 8c0d7d9a52207f04186f9c2dfd46bcc0, type: 3}
+      insertIndex: 8
+      addedObject: {fileID: 2072896877}
   m_SourcePrefab: {fileID: 100100000, guid: 8c0d7d9a52207f04186f9c2dfd46bcc0, type: 3}
 --- !u!4 &1934680239 stripped
 Transform:
@@ -1688,7 +1696,7 @@ Transform:
   m_GameObject: {fileID: 2002088460}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.157655, y: 1.9999999, z: -10}
+  m_LocalPosition: {x: -14.158564, y: 1.9999999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1807,12 +1815,36 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2391163507104350035, guid: 8c0d7d9a52207f04186f9c2dfd46bcc0, type: 3}
   m_PrefabInstance: {fileID: 1934680238}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 603242477}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa8ee753aa69a8a4a9639bd9fe58971a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInputHandler2D
+--- !u!114 &2072896877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603242477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 347c38b83e49d434d9febf3743d62db4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerControllerTopDown
+  walkSpeed: 5
+  sprintSpeed: 8
+  acceleration: 50
+  deceleration: 30
+  rotateTowardsMove: 0
+  flipSprite: 0
+  isMovingBoolName: IsMoving
+  inputXFloatName: InputX
+  inputYFloatName: InputY
+  lastInputXFloatName: LastInputX
+  lastInputYFloatName: LastInputY
+  speedFloatName: Speed
 --- !u!1001 &1093190891870257078
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1949,7 +1981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7489835257971574341, guid: dc78bbe9e4b1ab44482d224adcadc574, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.157655
+      value: -14.158564
       objectReference: {fileID: 0}
     - target: {fileID: 7489835257971574341, guid: dc78bbe9e4b1ab44482d224adcadc574, type: 3}
       propertyPath: m_LocalPosition.y

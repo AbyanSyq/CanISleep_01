@@ -41,7 +41,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 740, y: -290.6}
+  m_AnchoredPosition: {x: 712, y: 37}
   m_SizeDelta: {x: 1178, y: 306}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2909438351159395263
@@ -160,7 +160,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2004147085967497569}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -477,7 +477,13 @@ MonoBehaviour:
   uiText: {fileID: 2689520085050465794}
   speakerIcon: {fileID: 4703595305128111201}
   monologueText: {fileID: 556067322944600483}
-  typingSpeed: 0.1
+  dialogBlipID:
+    ID: 1073741838
+    _sourceAsset: {fileID: 11400000, guid: bfb665231dac0634699bf96c87be4f03, type: 2}
+    <DebugObject>k__BackingField: {fileID: 4371876695258567103}
+  pitchMin: 0.4
+  pitchMax: 0.6
+  typingSpeed: 0.05
 --- !u!114 &6173080845894196091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -503,7 +509,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4371876695258567103}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -558,7 +564,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1624.5, y: -223.1}
+  m_AnchoredPosition: {x: 1596.5, y: 104.49997}
   m_SizeDelta: {x: 591, y: 441}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7296766546886976449

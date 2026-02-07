@@ -150,7 +150,7 @@ MonoBehaviour:
   currentTransition: {fileID: 2547477717757406454}
   initialScene:
     m_SceneAsset: {fileID: 102900000, guid: efddefcddafd4124293c404b5c4fdbfa, type: 3}
-    m_SceneName: Level_xx
+    m_SceneName: Level_Moon
 --- !u!1001 &8676333500500736921
 PrefabInstance:
   m_ObjectHideFlags: 0
