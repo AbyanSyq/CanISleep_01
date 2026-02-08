@@ -2194,7 +2194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TransitionHandler
   targetScene:
-    m_SceneAsset: {fileID: 102900000, guid: d7c8df70c3aaa134ab9fec5a60c045a8, type: 3}
+    m_SceneAsset: {fileID: 0}
     m_SceneName: Dummy2
   delayBeforeTransition: 0
 --- !u!1001 &1685712138
