@@ -19,7 +19,7 @@ public class ShakeAnalogProgress : MonoBehaviour
     [SerializeField] private PlayerInputHandler2D inputHandler;
 
     [Header("Audio")]
-    private IAudioPlayer currentAudioPlayer;
+    private IMusicPlayer currentAudioPlayer;
     public SoundID progressingAudio;
     public SoundID idleAudio;
 
@@ -157,13 +157,13 @@ public class ShakeAnalogProgress : MonoBehaviour
             {
                 // Audio A
                 currentAudioPlayer?.Stop();
-                currentAudioPlayer = BroAudio.Play(progressingAudio,0);
+                currentAudioPlayer = BroAudio.Play(progressingAudio,0).AsBGM();
             }
             else
             {
                 // Audio B
                 currentAudioPlayer?.Stop();
-                currentAudioPlayer = BroAudio.Play(idleAudio,0);
+                currentAudioPlayer = BroAudio.Play(idleAudio,0).AsBGM();
             }
 
             _lastProgressState = isProgressing;
