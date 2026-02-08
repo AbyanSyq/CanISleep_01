@@ -1,167 +1,230 @@
 using UnityEngine;
 using System.Collections;
 
-public enum EnemyState
+public class EnemyController : MonoBehaviour
 {
-    Idle,
-    Patrol,
-    Attack
-}
+    public enum EnemyState { Idle, Patrol, Chase, Attack }
 
-public class EnemyBehavior : MonoBehaviour
-{
-    Rigidbody2D rb;
+    [Header("State Debug")]
+    [SerializeField] private EnemyState currentState = EnemyState.Idle;
 
-    public Collider2D checkRadius;
+    [Header("Movement Settings")]
+    [SerializeField] private float patrolSpeed = 2f;
+    [SerializeField] private float chaseSpeed = 3.5f; // Lebih cepat saat mengejar
+    [SerializeField] private Transform pointA;
+    [SerializeField] private Transform pointB;
+    [SerializeField] private float waitTimeAtPoint = 2f;
 
-    public float stateCooldown = 3f;
-    public float patrolSpeed = 2f;
+    [Header("Combat Settings")]
+    [SerializeField] private float detectionRange = 5f;
+    [SerializeField] private float attackRange = 1.2f; // Jarak stop untuk menyerang
+    [SerializeField] private float damageAmount = 10f;
+    [SerializeField] private LayerMask playerLayer;
+    [SerializeField] private Transform attackPoint;
+    [SerializeField] private float attackRadius = 0.5f;
+    [SerializeField] private float attackCooldown = 1.5f; // Menggantikan Coroutine cooldown
 
-    public float attackCooldown = 2f;
+    private Transform currentPatrolTarget;
+    private Transform playerTarget; // Menyimpan referensi player yang terdeteksi
+    private Rigidbody2D rb;
+    private Animator anim;
+    
+    private bool isWaiting = false;
+    private float lastAttackTime = 0f; // Timer untuk cooldown
 
-    bool attackOnCooldown = false;
-
-    public bool isAttacking = false;
-    bool isStateChangingCooldown = false;
-
-    public LayerMask playerLayer;
-
-    Animator animator;
-
-    float patrolDirection = 1f; // 1 = kanan, -1 = kiri
-
-    public EnemyState currentState = EnemyState.Idle;
+    // Parameter Animasi
+    private readonly string ANIM_SPEED = "speed";
+    private readonly string ANIM_ATTACK_TRIGGER = "attack";
+    private readonly string ANIM_IS_IDLE = "isIdle";
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
+        currentPatrolTarget = pointA;
+        // Opsional: Lepaskan parent point A/B agar ikut bergerak jika enemy child dari objek lain
+        if(pointA != null) pointA.parent = null;
+        if(pointB != null) pointB.parent = null;
     }
 
     void Update()
     {
-        // cooldown ganti state
-        if (!isAttacking && !isStateChangingCooldown)
-        {
-            StartCoroutine(WaitForStateChangingCooldown(stateCooldown));
-        }
-
-        CheckPlayer();
-        HandleState();
+        CheckForPlayer();
+        HandleStateMachine();
     }
 
-    void CheckPlayer()
+    private void CheckForPlayer()
     {
+        // Deteksi Player
+        Collider2D playerCollider = Physics2D.OverlapCircle(transform.position, detectionRange, playerLayer);
 
-    }
-
-    public void SetState(EnemyState newState)
-    {
-        currentState = newState;
-
-        // Random arah hanya saat masuk Patrol
-        if (newState == EnemyState.Patrol)
+        if (playerCollider != null)
         {
-            patrolDirection = Random.value < 0.5f ? -1f : 1f;
+            playerTarget = playerCollider.transform;
+            float distanceToPlayer = Vector2.Distance(transform.position, playerTarget.position);
+
+            if (distanceToPlayer <= attackRange)
+            {
+                currentState = EnemyState.Attack;
+            }
+            else
+            {
+                // Jika terdeteksi tapi diluar jarak serang -> KEJAR
+                currentState = EnemyState.Chase;
+            }
+        }
+        else
+        {
+            // Player hilang/kabur -> Kembali ke logika Patroli
+            playerTarget = null;
+            if (currentState != EnemyState.Patrol && currentState != EnemyState.Idle)
+            {
+                // Reset ke patrol jika kehilangan jejak
+                currentState = EnemyState.Patrol;
+            }
         }
     }
 
-    void HandleState()
+    private void HandleStateMachine()
     {
         switch (currentState)
         {
             case EnemyState.Idle:
-                rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
-                animator.SetBool("isWalking", false);
-                animator.SetBool("isAttacking", false);
+                StopMovement();
                 break;
 
             case EnemyState.Patrol:
-                rb.linearVelocity = new Vector2(patrolSpeed * patrolDirection, rb.linearVelocity.y);
-                animator.SetBool("isWalking", true);
+                PatrolLogic();
+                break;
+
+            case EnemyState.Chase:
+                ChaseLogic();
                 break;
 
             case EnemyState.Attack:
-
-                rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
-
-                if (!attackOnCooldown && !isAttacking)
-                {
-                    StartCoroutine(DoAttack());
-                }
-
+                AttackLogic();
                 break;
-
         }
     }
 
-    public IEnumerator WaitForStateChangingCooldown(float cooldown)
+    // --- LOGIKA MOVEMENT & ACTION ---
+
+    private void PatrolLogic()
     {
-        isStateChangingCooldown = true;
+        if (isWaiting || currentPatrolTarget == null) return;
 
-        yield return new WaitForSeconds(cooldown);
+        MoveTo(currentPatrolTarget.position, patrolSpeed);
 
-        SetState(GetRandomEnemyState<EnemyState>());
-
-        isStateChangingCooldown = false;
-    }
-
-    public static T GetRandomEnemyState<T>()
-    {
-        T[] values = (T[])System.Enum.GetValues(typeof(T));
-        return values[Random.Range(0, values.Length - 1)];
-    }
-
-    public void Attack()
-    {
-        // handle attack
-
-    }
-
-    IEnumerator DoAttack()
-    {
-        isAttacking = true;
-        attackOnCooldown = true;
-
-        animator.SetBool("isAttacking", true);
-
-        // tunggu animasi attack (contoh 0.5 detik)
-
-        Attack(); // panggil logic attack kamu
-
-        animator.SetBool("isAttacking", false);
-
-        // cooldown attack
-        yield return new WaitForSeconds(attackCooldown);
-
-        attackOnCooldown = false;
-        isAttacking = false;
-    }
-
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (((1 << other.gameObject.layer) & playerLayer) != 0)
+        if (Vector2.Distance(transform.position, currentPatrolTarget.position) < 0.2f)
         {
-            SetState(EnemyState.Attack);
+            StartCoroutine(WaitAtPatrolPoint());
         }
-
-
     }
 
-    void OnTriggerExit2D(Collider2D other)
+    private void ChaseLogic()
     {
-        if (((1 << other.gameObject.layer) & playerLayer) != 0)
+        if (playerTarget == null) return;
+
+        // Bergerak menuju posisi pemain dengan kecepatan lari (Chase Speed)
+        MoveTo(playerTarget.position, chaseSpeed);
+    }
+
+    private void AttackLogic()
+    {
+        StopMovement(); // Berhenti bergerak saat menyerang
+
+        if (playerTarget != null)
         {
-            SetState(EnemyState.Idle);
+            LookAtTarget(playerTarget.position); // Pastikan menghadap pemain
+        }
+
+        // Cek Cooldown sebelum menyerang lagi
+        if (Time.time >= lastAttackTime + attackCooldown)
+        {
+            lastAttackTime = Time.time;
+            anim.SetTrigger(ANIM_ATTACK_TRIGGER);
         }
     }
 
-    public IEnumerator WaitForAttackCooldown(float cooldown)
+    // --- HELPER FUNCTIONS ---
+
+    private void MoveTo(Vector2 targetPos, float speed)
     {
-        attackOnCooldown = true;
-        yield return new WaitForSeconds(cooldown);
-        attackOnCooldown = false;
+        Vector2 direction = (targetPos - (Vector2)transform.position).normalized;
+        rb.linearVelocity = new Vector2(direction.x * speed, rb.linearVelocity.y);
+
+        // Update Animasi Lari/Jalan
+        anim.SetFloat(ANIM_SPEED, Mathf.Abs(rb.linearVelocity.x));
+        anim.SetBool(ANIM_IS_IDLE, false);
+
+        LookAtTarget(targetPos);
     }
 
+    private void LookAtTarget(Vector2 targetPos)
+    {
+        // Logic Flip sederhana
+        if (transform.position.x < targetPos.x)
+            transform.localScale = new Vector3(1, 1, 1); // Hadap Kanan
+        else if (transform.position.x > targetPos.x)
+            transform.localScale = new Vector3(-1, 1, 1); // Hadap Kiri
+    }
+
+    private void StopMovement()
+    {
+        rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+        anim.SetFloat(ANIM_SPEED, 0);
+        anim.SetBool(ANIM_IS_IDLE, true);
+    }
+
+    private IEnumerator WaitAtPatrolPoint()
+    {
+        isWaiting = true;
+        StopMovement();
+        
+        // Pakai state Idle agar animasi berubah ke Idle
+        EnemyState previousState = currentState;
+        currentState = EnemyState.Idle; 
+
+        yield return new WaitForSeconds(waitTimeAtPoint);
+
+        // Switch target patroli
+        currentPatrolTarget = (currentPatrolTarget == pointA) ? pointB : pointA;
+        
+        currentState = EnemyState.Patrol; // Paksa kembali ke patrol
+        isWaiting = false;
+    }
+
+    // --- ANIMATION EVENTS ---
+
+    // Dipanggil oleh Animation Event
+    public void ApplyDamage()
+    {
+        // Menggunakan OverlapCircleAll agar bisa kena multi-target (misal player dan NPC teman)
+        Collider2D[] hitObjects = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, playerLayer);
+
+        foreach (Collider2D obj in hitObjects)
+        {
+            IDamageable damageable = obj.GetComponent<IDamageable>();
+            if (damageable != null)
+            {
+                damageable.TakeDamage(damageAmount, attackPoint.position);
+            }
+        }
+    }
+
+    // --- DEBUG GIZMOS ---
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, detectionRange); // Area Deteksi
+        
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange); // Area Mulai Attack
+
+        if (attackPoint != null)
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(attackPoint.position, attackRadius); // Area Damage Hit
+        }
+    }
 }

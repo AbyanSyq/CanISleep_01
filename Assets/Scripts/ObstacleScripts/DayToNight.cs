@@ -10,6 +10,7 @@ public class DayToNight : MonoBehaviour
     [SerializeField] private Vector3 dayRotation; 
     [SerializeField] private Vector3 nightRotation; 
     
+    
     [Header("Sky Settings")]
     [SerializeField] SpriteRenderer skyImage;
     [SerializeField, Range(0f, 1f)] private float skyColorStart = 0f;
@@ -48,18 +49,17 @@ public class DayToNight : MonoBehaviour
 
     private void UpdateEnvironment(float t)
     {
-        // --- 1. Rotasi Matahari/Bulan ---
-        // InverseLerp mengubah range [rotationStart, rotationEnd] menjadi [0, 1]
         float rotationT = Mathf.InverseLerp(rotationStart, rotationEnd, t);
 
-// Ambil rotasi saat ini
-        Vector3 angles = sunAndMoonTransform.localEulerAngles;
+        sunAndMoonTransform.localRotation = Quaternion.Lerp(
 
-        // Hanya ganti Z
-        angles.z = Mathf.LerpUnclamped(dayRotation.z, nightRotation.z, rotationT);
+            Quaternion.Euler(dayRotation),
 
-        // Masukkan kembali
-        sunAndMoonTransform.localEulerAngles = angles;
+            Quaternion.Euler(nightRotation),
+
+            rotationT
+
+        );
 
         // --- 2. Warna Langit ---
         float skyT = Mathf.InverseLerp(skyColorStart, skyColorEnd, t);

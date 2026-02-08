@@ -116,7 +116,7 @@ public class GameplayManager : SingletonMonoBehaviour<GameplayManager>
     // HELPER METHODS (Supaya Rapi)
     // ---------------------------------------------------------
     
-    private void TogglePlayerInput(bool isActive)
+    public void TogglePlayerInput(bool isActive)
     {
         if (playerInputHandler != null)
         {
