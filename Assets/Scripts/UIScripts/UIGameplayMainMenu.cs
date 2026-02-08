@@ -15,6 +15,7 @@ public class UIGameplayMainMenu : UIBase
 
     private Coroutine hintTimerCoroutine;
     private bool isGameStarted = false;
+    private float lastProgress = 0f;
 
     void Start()
     {
@@ -45,8 +46,13 @@ public class UIGameplayMainMenu : UIBase
                 StartCoroutine(SetProgressBarUI(true));
                 
                 // Jika ada pergerakan, sembunyikan petunjuk dan reset timer
-                HideHint();
-                ResetHintTimer();
+                if(lastProgress < progress)
+                {
+                    HideHint();
+                    ResetHintTimer();
+                }
+
+                lastProgress = progress;
             }
             else if (progress <= 0f)
             {
