@@ -49,21 +49,48 @@ public class PlayerControllerTopDown : MonoBehaviour
     }
 
     private void Move()
+{
+    float targetSpeed = input.sprint ? sprintSpeed : walkSpeed;
+    
+    // 1. Ambil input dasar
+    Vector2 moveInput = input.move; // Analog Pergerakan
+    Vector2 lookInput = input.look; // Analog Pandangan (Pastikan variabel ini ada di PlayerInputHandler2D)
+
+    Vector2 finalMovement = Vector2.zero;
+
+    // 2. Logika Gerakan Horizontal (Bebas/Flat)
+    finalMovement.x = moveInput.x;
+
+    // 3. Logika Gerakan Vertikal (Syarat Sinkronisasi)
+    if (Mathf.Abs(moveInput.y) > 0.1f) 
     {
-        float targetSpeed = input.sprint ? sprintSpeed : walkSpeed;
-        
-        // Normalisasi input agar gerak diagonal tidak lebih cepat
-        Vector2 targetVector = (input.move.magnitude > 0) ? input.move.normalized * targetSpeed : Vector2.zero;
+        // Cek apakah pemain juga menekan analog Look ke arah vertikal yang sama
+        // Kita gunakan Threshold (misal > 0.5f) agar input harus tegas, bukan tersenggol tidak sengaja
+        bool isLookSynchronized = Mathf.Sign(moveInput.y) == Mathf.Sign(lookInput.y) && Mathf.Abs(lookInput.y) > 0.5f;
 
-        // Cek apakah ada input gerakan yang signifikan
-        isMoving = input.move.magnitude > 0.01f;
-
-        Vector2 velocityDifference = targetVector - rb.linearVelocity; 
-        float accelRate = isMoving ? acceleration : deceleration;
-        Vector2 movementForce = velocityDifference * accelRate;
-        
-        rb.AddForce(movementForce);
+        if (isLookSynchronized)
+        {
+            finalMovement.y = moveInput.y;
+        }
+        else
+        {
+            // Jika tidak selaras, paksa Y jadi 0 (Hanya bisa geser kanan/kiri)
+            finalMovement.y = 0;
+        }
     }
+
+    // 4. Eksekusi Gerakan
+    isMoving = finalMovement.magnitude > 0.01f;
+    
+    // Normalisasi hasil akhir agar diagonal tidak ngebut
+    Vector2 targetVector = finalMovement.normalized * (isMoving ? targetSpeed : 0f);
+
+    Vector2 velocityDifference = targetVector - rb.linearVelocity; 
+    float accelRate = isMoving ? acceleration : deceleration;
+    Vector2 movementForce = velocityDifference * accelRate;
+    
+    rb.AddForce(movementForce);
+}
 
     private void HandleRotation()
     {

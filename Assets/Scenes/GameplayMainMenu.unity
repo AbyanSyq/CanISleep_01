@@ -1107,8 +1107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TransitionHandler
   targetScene:
-    m_SceneAsset: {fileID: 102900000, guid: f613773bfe5751f44869448fa7a08c28, type: 3}
-    m_SceneName: Dummy1
+    m_SceneAsset: {fileID: 102900000, guid: 25f561aa16c5fe044858f76164d26fa8, type: 3}
+    m_SceneName: Intro
   delayBeforeTransition: 0
 --- !u!1 &703077372
 GameObject:
@@ -1594,7 +1594,7 @@ MonoBehaviour:
     <DebugObject>k__BackingField: {fileID: 1798288115}
   progress: 0
   isProgressing: 0
-  sensitivity: 0.4
+  sensitivity: 0.8
   decayRate: 0.01
   deadzone: 0.1
   useVibration: 0
@@ -1655,8 +1655,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1778192828873629590, guid: f3dc1af9ea5e5b94da368f0200053489, type: 3}
       propertyPath: initialScene.m_SceneName
-      value: Level_Moon
+      value: Intro
       objectReference: {fileID: 0}
+    - target: {fileID: 1778192828873629590, guid: f3dc1af9ea5e5b94da368f0200053489, type: 3}
+      propertyPath: initialScene.m_SceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 25f561aa16c5fe044858f76164d26fa8, type: 3}
     - target: {fileID: 1874053544507552301, guid: f3dc1af9ea5e5b94da368f0200053489, type: 3}
       propertyPath: m_Name
       value: TransitionManager
