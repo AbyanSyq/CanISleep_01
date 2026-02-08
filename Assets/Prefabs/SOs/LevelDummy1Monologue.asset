@@ -16,5 +16,9 @@ MonoBehaviour:
   - type: 0
     icon: {fileID: 21300000, guid: 841aa2124e62351478a0abbcb3f0feab, type: 3}
     displayDuration: 2
-    text: This world is full of spike, but don't worry, they wont hurt a bit
+    text: Who put those little spike all over?
+  - type: 0
+    icon: {fileID: 21300000, guid: 841aa2124e62351478a0abbcb3f0feab, type: 3}
+    displayDuration: 2
+    text: They think such spike will hurt huh?
   intervalBetweenTexts: 1
