@@ -28,9 +28,9 @@ MonoBehaviour:
   - type: 0
     icon: {fileID: 21300000, guid: 841aa2124e62351478a0abbcb3f0feab, type: 3}
     displayDuration: 2
-    text: Oh, My name is Pinochoco. Nice to meet You
+    text: Oh, my name is Pinochoco. Nice to meet You
   - type: 0
     icon: {fileID: 21300000, guid: cf243899369a29446ad9158908332012, type: 3}
     displayDuration: 2
-    text: Don't talk much aren't you? fine just go to the left
+    text: Don't talk much do you? Fine, just go to the left
   intervalBetweenTexts: 1

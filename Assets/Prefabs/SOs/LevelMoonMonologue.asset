@@ -16,11 +16,11 @@ MonoBehaviour:
   - type: 0
     icon: {fileID: 21300000, guid: 9e1c23cf511c631429105cb240005479, type: 3}
     displayDuration: 2
-    text: Don't you think this jump kinda imposibble?
+    text: Don't you think this jump is kinda imposibble?
   - type: 0
     icon: {fileID: 21300000, guid: 841aa2124e62351478a0abbcb3f0feab, type: 3}
     displayDuration: 2
-    text: Nah, I bet you can. I'm just felt a bit dizzy from this sunny day
+    text: Nah, I bet you can. I'm just feeling a bit dizzy from this sunny day
   - type: 0
     icon: {fileID: 21300000, guid: cf243899369a29446ad9158908332012, type: 3}
     displayDuration: 2

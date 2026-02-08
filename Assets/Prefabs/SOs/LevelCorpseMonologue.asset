@@ -32,10 +32,10 @@ MonoBehaviour:
   - type: 0
     icon: {fileID: 21300000, guid: 841aa2124e62351478a0abbcb3f0feab, type: 3}
     displayDuration: 5
-    text: You won't forgive me do you?
+    text: You won't forgive me, will you?
   - type: 0
     icon: {fileID: 21300000, guid: cf243899369a29446ad9158908332012, type: 3}
     displayDuration: 5
-    text: Listen. In life, If you make mistake, you can't turn back the time to fix
+    text: Listen. In life, If you make a mistake, you can't turn back time to fix
       your mistake
   intervalBetweenTexts: 1

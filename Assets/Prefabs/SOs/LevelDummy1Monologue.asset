@@ -16,9 +16,9 @@ MonoBehaviour:
   - type: 0
     icon: {fileID: 21300000, guid: 841aa2124e62351478a0abbcb3f0feab, type: 3}
     displayDuration: 2
-    text: Who put those little spike all over?
+    text: Who put those little spikes all over?
   - type: 0
     icon: {fileID: 21300000, guid: 841aa2124e62351478a0abbcb3f0feab, type: 3}
     displayDuration: 2
-    text: They think such spike will hurt huh?
+    text: They think such spikes will hurt huh?
   intervalBetweenTexts: 1
