@@ -1596,8 +1596,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TransitionHandler
   targetScene:
-    m_SceneAsset: {fileID: 102900000, guid: d7c8df70c3aaa134ab9fec5a60c045a8, type: 3}
-    m_SceneName: Dummy2
+    m_SceneAsset: {fileID: 102900000, guid: 87f138c23d08b0c43b232a7e5eb53591, type: 3}
+    m_SceneName: Level_Jump
   delayBeforeTransition: 0
 --- !u!4 &1786591570 stripped
 Transform:

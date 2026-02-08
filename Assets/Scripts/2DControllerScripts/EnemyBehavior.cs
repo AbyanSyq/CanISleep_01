@@ -3,7 +3,7 @@ using System.Collections;
 using Ami.BroAudio;
 using System.ComponentModel;
 
-public class EnemyController : MonoBehaviour
+public class EnemyBehavior : MonoBehaviour
 {
     public enum EnemyState { Idle, Patrol, Chase, Attack }
 
