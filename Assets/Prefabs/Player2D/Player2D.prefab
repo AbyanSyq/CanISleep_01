@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 5465554069587651642}
   - component: {fileID: 7421507262884580398}
   - component: {fileID: 5824356534652816918}
+  - component: {fileID: 4157000612448489706}
   m_Layer: 4
   m_Name: Player2D
   m_TagString: Untagged
@@ -208,6 +209,7 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls: []
+  playerAudioHandler: {fileID: 0}
 --- !u!114 &2391163507104350035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,6 +256,7 @@ MonoBehaviour:
   yVelocityFloatName: yVelocity
   isGroundedBoolName: isGrounded
   speedFloatName: speed
+  playerAudioHandler: {fileID: 0}
 --- !u!114 &5935718652454100799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,6 +387,26 @@ MonoBehaviour:
   hiddenScale: {x: 0, y: 0, z: 0}
   showEase: 27
   hideEase: 26
+--- !u!114 &4157000612448489706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5177424840934152609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fb7b0e7aa8268947af57d6fb8b21b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAudioHandler
+  jumpingAudio:
+    ID: 1073741843
+    _sourceAsset: {fileID: 11400000, guid: bfb665231dac0634699bf96c87be4f03, type: 2}
+    <DebugObject>k__BackingField: {fileID: 5177424840934152609}
+  dieAudio:
+    ID: 1073741844
+    _sourceAsset: {fileID: 11400000, guid: bfb665231dac0634699bf96c87be4f03, type: 2}
+    <DebugObject>k__BackingField: {fileID: 5177424840934152609}
 --- !u!1 &7227951644928659297
 GameObject:
   m_ObjectHideFlags: 0

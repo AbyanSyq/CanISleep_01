@@ -45,6 +45,11 @@ public class ShakeAnalogProgress : MonoBehaviour
     public UnityEvent OnProgressComplete;
     public UnityEvent OnFoundedByMom;
 
+    void Start()
+    {
+        currentAudioPlayer = BroAudio.Play(idleAudio,0).AsBGM();
+    }
+
     private void Update()
     {
         if (inputHandler == null) return;

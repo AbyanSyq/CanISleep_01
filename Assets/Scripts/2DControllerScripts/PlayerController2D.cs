@@ -29,6 +29,9 @@ public class PlayerController2D : MonoBehaviour
     [SerializeField] private string isGroundedBoolName = "isGrounded";
     [SerializeField] private string speedFloatName = "speed";
 
+    [Header("Audio Settings")]
+    [SerializeField] private PlayerAudioHandler playerAudioHandler;
+
 
     // References
     private Rigidbody2D rb;
@@ -48,6 +51,7 @@ public class PlayerController2D : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         input = GetComponent<PlayerInputHandler2D>();
         anim = GetComponent<Animator>(); // Ambil komponen Animator
+        playerAudioHandler = GetComponent<PlayerAudioHandler>();
     }
 
     private void Update()
@@ -143,6 +147,7 @@ public class PlayerController2D : MonoBehaviour
         // --- ANIMATION TRIGGER ---
         // Memicu animasi lompat seketika
         anim.SetTrigger("jump"); 
+        playerAudioHandler.PlayJumpingSound();
     }
 
     private void UpdateGravityScale()
