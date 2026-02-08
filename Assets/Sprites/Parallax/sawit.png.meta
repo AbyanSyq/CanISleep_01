@@ -1,0 +1,2483 @@
+fileFormatVersion: 2
+guid: fe9391240b79c2b4db61814f8e66220f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4775391259286606831
+    second: sawit_0
+  - first:
+      213: 9160646621207821323
+    second: sawit_1
+  - first:
+      213: -7140316848421790748
+    second: sawit_2
+  - first:
+      213: -2403522360756194241
+    second: sawit_3
+  - first:
+      213: 4980457022479027669
+    second: sawit_4
+  - first:
+      213: 5597668626899146456
+    second: sawit_5
+  - first:
+      213: 1202625245461096566
+    second: sawit_6
+  - first:
+      213: 6720803153710750876
+    second: sawit_7
+  - first:
+      213: 4995019613401099470
+    second: sawit_8
+  - first:
+      213: 8584977120795763586
+    second: sawit_9
+  - first:
+      213: 8517985497124191737
+    second: sawit_10
+  - first:
+      213: -5345318266186919359
+    second: sawit_11
+  - first:
+      213: 878661046922682629
+    second: sawit_12
+  - first:
+      213: 8924915487500225163
+    second: sawit_13
+  - first:
+      213: 7711674236009026463
+    second: sawit_14
+  - first:
+      213: -7885183519772474545
+    second: sawit_15
+  - first:
+      213: -1218141716564768060
+    second: sawit_16
+  - first:
+      213: -1547105736523957925
+    second: sawit_17
+  - first:
+      213: 9175573031461218959
+    second: sawit_18
+  - first:
+      213: 6983819591973517607
+    second: sawit_19
+  - first:
+      213: 7127425106726854967
+    second: sawit_20
+  - first:
+      213: -7799481252935135730
+    second: sawit_21
+  - first:
+      213: 5827219762124875611
+    second: sawit_22
+  - first:
+      213: 8020015546230450467
+    second: sawit_23
+  - first:
+      213: 3537761356318344517
+    second: sawit_24
+  - first:
+      213: 6311173046270026660
+    second: sawit_25
+  - first:
+      213: 7510189867359400784
+    second: sawit_26
+  - first:
+      213: -1503843362615350370
+    second: sawit_27
+  - first:
+      213: 3415099028697425727
+    second: sawit_28
+  - first:
+      213: 93577887228207459
+    second: sawit_29
+  - first:
+      213: -1671844633296698149
+    second: sawit_30
+  - first:
+      213: -6629380361313658451
+    second: sawit_31
+  - first:
+      213: 8935800789249340749
+    second: sawit_32
+  - first:
+      213: 1322153288592960897
+    second: sawit_33
+  - first:
+      213: 6405261169212406692
+    second: sawit_34
+  - first:
+      213: -1839219412577354120
+    second: sawit_35
+  - first:
+      213: 2072686188670339773
+    second: sawit_36
+  - first:
+      213: 8390039222233224491
+    second: sawit_37
+  - first:
+      213: 396821600107764771
+    second: sawit_38
+  - first:
+      213: 2895352982633185492
+    second: sawit_39
+  - first:
+      213: -8888066949043545765
+    second: sawit_40
+  - first:
+      213: -4651924079497354816
+    second: sawit_41
+  - first:
+      213: 3354785852174405852
+    second: sawit_42
+  - first:
+      213: 2781225241057220093
+    second: sawit_43
+  - first:
+      213: 7304594432213675065
+    second: sawit_44
+  - first:
+      213: 397564034668239764
+    second: sawit_45
+  - first:
+      213: 9123094849330702392
+    second: sawit_46
+  - first:
+      213: -8269954683377643856
+    second: sawit_47
+  - first:
+      213: -5064692928769419178
+    second: sawit_48
+  - first:
+      213: 3870595920563501921
+    second: sawit_49
+  - first:
+      213: -2571906287359005833
+    second: sawit_50
+  - first:
+      213: 7766317453616281795
+    second: sawit_51
+  - first:
+      213: -7365628397163613326
+    second: sawit_52
+  - first:
+      213: -6256236156771101087
+    second: sawit_53
+  - first:
+      213: -3430019668137212370
+    second: sawit_54
+  - first:
+      213: -397018645898782487
+    second: sawit_55
+  - first:
+      213: 9082455710051768471
+    second: sawit_56
+  - first:
+      213: -7916998341606658968
+    second: sawit_57
+  - first:
+      213: -6990269546998715302
+    second: sawit_58
+  - first:
+      213: -2676533785188860812
+    second: sawit_59
+  - first:
+      213: -6123018221428298077
+    second: sawit_60
+  - first:
+      213: 289270630465372328
+    second: sawit_61
+  - first:
+      213: -5928610079270927233
+    second: sawit_62
+  - first:
+      213: 6897467104395043224
+    second: sawit_63
+  - first:
+      213: 4167309915462999791
+    second: sawit_64
+  - first:
+      213: 4318611944383205526
+    second: sawit_65
+  - first:
+      213: 7167824882920236240
+    second: sawit_66
+  - first:
+      213: 9040655571127798568
+    second: sawit_67
+  - first:
+      213: -5310723966353386494
+    second: sawit_68
+  - first:
+      213: -5360888930411846356
+    second: sawit_69
+  - first:
+      213: 4939399953614979789
+    second: sawit_70
+  - first:
+      213: -9004655546931304601
+    second: sawit_71
+  - first:
+      213: 7656098626290255656
+    second: sawit_72
+  - first:
+      213: -893262465058838882
+    second: sawit_73
+  - first:
+      213: -8966366856845262457
+    second: sawit_74
+  - first:
+      213: 5532164481708558942
+    second: sawit_75
+  - first:
+      213: 368340078163282125
+    second: sawit_76
+  - first:
+      213: 1740730032737958538
+    second: sawit_77
+  - first:
+      213: 3553410242796609337
+    second: sawit_78
+  - first:
+      213: -8015116181210415220
+    second: sawit_79
+  - first:
+      213: 943993684828189398
+    second: sawit_80
+  - first:
+      213: -8649959198598781021
+    second: sawit_81
+  - first:
+      213: 574083522762197814
+    second: sawit_82
+  - first:
+      213: 6011767139710912147
+    second: sawit_83
+  - first:
+      213: 1411976897540031898
+    second: sawit_84
+  - first:
+      213: -5035454086836239639
+    second: sawit_85
+  - first:
+      213: 3131562167041300578
+    second: sawit_86
+  - first:
+      213: -3215486503881634872
+    second: sawit_87
+  - first:
+      213: -7369287611283873610
+    second: sawit_88
+  - first:
+      213: 3356695524565842790
+    second: sawit_89
+  - first:
+      213: -930991616263523359
+    second: sawit_90
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sawit_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 394
+        width: 575
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11c67b663f66abdb0800000000000000
+      internalID: -4775391259286606831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_1
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 389
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0c79f91197212f70800000000000000
+      internalID: 9160646621207821323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_2
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 348
+        width: 66
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eb151a48af78ec90800000000000000
+      internalID: -7140316848421790748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_3
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 253
+        width: 533
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f343b65b529f4aed0800000000000000
+      internalID: -2403522360756194241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_4
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 394
+        width: 575
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dd46fb36432e1540800000000000000
+      internalID: 4980457022479027669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_5
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 389
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d61cac55f9eead40800000000000000
+      internalID: 5597668626899146456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_6
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 348
+        width: 66
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67820a9f94590b010800000000000000
+      internalID: 1202625245461096566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_7
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 253
+        width: 533
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9c11462cd6154d50800000000000000
+      internalID: 6720803153710750876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_8
+      rect:
+        serializedVersion: 2
+        x: 2437
+        y: 394
+        width: 575
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecca1e6afdfd15540800000000000000
+      internalID: 4995019613401099470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_9
+      rect:
+        serializedVersion: 2
+        x: 2451
+        y: 389
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28323e9c437f32770800000000000000
+      internalID: 8584977120795763586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_10
+      rect:
+        serializedVersion: 2
+        x: 2719
+        y: 348
+        width: 66
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fd340eeda6f53670800000000000000
+      internalID: 8517985497124191737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_11
+      rect:
+        serializedVersion: 2
+        x: 3029
+        y: 253
+        width: 533
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 142958c8b5d91d5b0800000000000000
+      internalID: -5345318266186919359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_12
+      rect:
+        serializedVersion: 2
+        x: 3629
+        y: 394
+        width: 575
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 501accb1191a13c00800000000000000
+      internalID: 878661046922682629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_13
+      rect:
+        serializedVersion: 2
+        x: 3641
+        y: 389
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8a45d2895babdb70800000000000000
+      internalID: 8924915487500225163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_14
+      rect:
+        serializedVersion: 2
+        x: 3911
+        y: 348
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9399d40cde550b60800000000000000
+      internalID: 7711674236009026463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_15
+      rect:
+        serializedVersion: 2
+        x: 4221
+        y: 253
+        width: 532
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f438233cd53329290800000000000000
+      internalID: -7885183519772474545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_16
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 394
+        width: 574
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ca8212109a481fe0800000000000000
+      internalID: -1218141716564768060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_17
+      rect:
+        serializedVersion: 2
+        x: 4813
+        y: 389
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5935809783978ae0800000000000000
+      internalID: -1547105736523957925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_18
+      rect:
+        serializedVersion: 2
+        x: 5081
+        y: 348
+        width: 66
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8a66eece0f265f70800000000000000
+      internalID: 9175573031461218959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_19
+      rect:
+        serializedVersion: 2
+        x: 5391
+        y: 253
+        width: 533
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 729bef2cae28be060800000000000000
+      internalID: 6983819591973517607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_20
+      rect:
+        serializedVersion: 2
+        x: 6019
+        y: 394
+        width: 574
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 731a7a13f53b9e260800000000000000
+      internalID: 7127425106726854967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_21
+      rect:
+        serializedVersion: 2
+        x: 6031
+        y: 389
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0e8b76bf1da2c390800000000000000
+      internalID: -7799481252935135730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_22
+      rect:
+        serializedVersion: 2
+        x: 6299
+        y: 348
+        width: 67
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b57e69def717ed050800000000000000
+      internalID: 5827219762124875611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_23
+      rect:
+        serializedVersion: 2
+        x: 6610
+        y: 253
+        width: 532
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3292d2eb5a1dc4f60800000000000000
+      internalID: 8020015546230450467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_24
+      rect:
+        serializedVersion: 2
+        x: 7209
+        y: 394
+        width: 575
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 545857fa537a81130800000000000000
+      internalID: 3537761356318344517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_25
+      rect:
+        serializedVersion: 2
+        x: 7223
+        y: 389
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a3e1f2927ac59750800000000000000
+      internalID: 6311173046270026660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_26
+      rect:
+        serializedVersion: 2
+        x: 7491
+        y: 348
+        width: 66
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 053f1b7c4ed893860800000000000000
+      internalID: 7510189867359400784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_27
+      rect:
+        serializedVersion: 2
+        x: 7801
+        y: 253
+        width: 533
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9bab7ded66412be0800000000000000
+      internalID: -1503843362615350370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_28
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 215
+        width: 81
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f37aa4ef87ed46f20800000000000000
+      internalID: 3415099028697425727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_29
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 281
+        width: 72
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 361a117b7947c4100800000000000000
+      internalID: 93577887228207459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_30
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 215
+        width: 81
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd405b0f92a6cc8e0800000000000000
+      internalID: -1671844633296698149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_31
+      rect:
+        serializedVersion: 2
+        x: 1503
+        y: 281
+        width: 73
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da9d2f27fa5bff3a0800000000000000
+      internalID: -6629380361313658451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_32
+      rect:
+        serializedVersion: 2
+        x: 2719
+        y: 215
+        width: 82
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d45bcd25977520c70800000000000000
+      internalID: 8935800789249340749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_33
+      rect:
+        serializedVersion: 2
+        x: 2721
+        y: 281
+        width: 73
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18da231396b395210800000000000000
+      internalID: 1322153288592960897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_34
+      rect:
+        serializedVersion: 2
+        x: 3911
+        y: 215
+        width: 81
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ab328cc81f04e850800000000000000
+      internalID: 6405261169212406692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_35
+      rect:
+        serializedVersion: 2
+        x: 3913
+        y: 281
+        width: 72
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87ef25950b7c976e0800000000000000
+      internalID: -1839219412577354120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_36
+      rect:
+        serializedVersion: 2
+        x: 5081
+        y: 215
+        width: 83
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbacd866b19a3cc10800000000000000
+      internalID: 2072686188670339773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_37
+      rect:
+        serializedVersion: 2
+        x: 5083
+        y: 281
+        width: 74
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b255ec468386f6470800000000000000
+      internalID: 8390039222233224491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_38
+      rect:
+        serializedVersion: 2
+        x: 6299
+        y: 215
+        width: 83
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32c10a1942bc18500800000000000000
+      internalID: 396821600107764771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_39
+      rect:
+        serializedVersion: 2
+        x: 6301
+        y: 281
+        width: 74
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d0083d823c5e2820800000000000000
+      internalID: 2895352982633185492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_40
+      rect:
+        serializedVersion: 2
+        x: 7491
+        y: 215
+        width: 82
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b599e5a633e37a480800000000000000
+      internalID: -8888066949043545765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_41
+      rect:
+        serializedVersion: 2
+        x: 7493
+        y: 281
+        width: 73
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c1697752bb017fb0800000000000000
+      internalID: -4651924079497354816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_42
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 153
+        width: 91
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd09c5845f79e8e20800000000000000
+      internalID: 3354785852174405852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_43
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 142
+        width: 76
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df5d0950f95e89620800000000000000
+      internalID: 2781225241057220093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_44
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 199
+        width: 68
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93c64684fe12f5560800000000000000
+      internalID: 7304594432213675065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_45
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 153
+        width: 91
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49b1fd5126e648500800000000000000
+      internalID: 397564034668239764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_46
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 142
+        width: 76
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8386d82ed6ebb9e70800000000000000
+      internalID: 9123094849330702392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_47
+      rect:
+        serializedVersion: 2
+        x: 2021
+        y: 199
+        width: 68
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0be82b418083b3d80800000000000000
+      internalID: -8269954683377643856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_48
+      rect:
+        serializedVersion: 2
+        x: 2710
+        y: 153
+        width: 92
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 658144c7d9896b9b0800000000000000
+      internalID: -5064692928769419178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_49
+      rect:
+        serializedVersion: 2
+        x: 3234
+        y: 142
+        width: 76
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16b73428b7e17b530800000000000000
+      internalID: 3870595920563501921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_50
+      rect:
+        serializedVersion: 2
+        x: 3239
+        y: 199
+        width: 68
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77b6f52bbd0ce4cd0800000000000000
+      internalID: -2571906287359005833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_51
+      rect:
+        serializedVersion: 2
+        x: 3902
+        y: 153
+        width: 91
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c8f6bb839087cb60800000000000000
+      internalID: 7766317453616281795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_52
+      rect:
+        serializedVersion: 2
+        x: 4426
+        y: 142
+        width: 76
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 273788f5ff708c990800000000000000
+      internalID: -7365628397163613326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_53
+      rect:
+        serializedVersion: 2
+        x: 4431
+        y: 199
+        width: 68
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16614b4cc526d29a0800000000000000
+      internalID: -6256236156771101087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_54
+      rect:
+        serializedVersion: 2
+        x: 5073
+        y: 153
+        width: 92
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e26041ce84f1660d0800000000000000
+      internalID: -3430019668137212370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_55
+      rect:
+        serializedVersion: 2
+        x: 5597
+        y: 142
+        width: 76
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e81ff125a18d7af0800000000000000
+      internalID: -397018645898782487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_56
+      rect:
+        serializedVersion: 2
+        x: 5602
+        y: 199
+        width: 68
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7989adde85d5b0e70800000000000000
+      internalID: 9082455710051768471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_57
+      rect:
+        serializedVersion: 2
+        x: 6292
+        y: 153
+        width: 91
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86cad2154fb212290800000000000000
+      internalID: -7916998341606658968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_58
+      rect:
+        serializedVersion: 2
+        x: 6816
+        y: 142
+        width: 76
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5c29ee02e29dfe90800000000000000
+      internalID: -6990269546998715302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_59
+      rect:
+        serializedVersion: 2
+        x: 6821
+        y: 199
+        width: 68
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47c7c7804ba0bdad0800000000000000
+      internalID: -2676533785188860812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_60
+      rect:
+        serializedVersion: 2
+        x: 7483
+        y: 153
+        width: 91
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aea5866e5ba60ba0800000000000000
+      internalID: -6123018221428298077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_61
+      rect:
+        serializedVersion: 2
+        x: 8006
+        y: 142
+        width: 77
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a087d41b12b30400800000000000000
+      internalID: 289270630465372328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_62
+      rect:
+        serializedVersion: 2
+        x: 8012
+        y: 199
+        width: 68
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7481454b8859bda0800000000000000
+      internalID: -5928610079270927233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_63
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 78
+        width: 103
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 891a86f79c9b8bf50800000000000000
+      internalID: 6897467104395043224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_64
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 23
+        width: 100
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fee922ce94245d930800000000000000
+      internalID: 4167309915462999791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_65
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 86
+        width: 86
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69058b3beaaceeb30800000000000000
+      internalID: 4318611944383205526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_66
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 78
+        width: 103
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d4aaa611ca397360800000000000000
+      internalID: 7167824882920236240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_67
+      rect:
+        serializedVersion: 2
+        x: 2012
+        y: 23
+        width: 100
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82b8abda75cd67d70800000000000000
+      internalID: 9040655571127798568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_68
+      rect:
+        serializedVersion: 2
+        x: 2014
+        y: 86
+        width: 86
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2045a55a0b48c46b0800000000000000
+      internalID: -5310723966353386494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_69
+      rect:
+        serializedVersion: 2
+        x: 2698
+        y: 78
+        width: 104
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c256a76cbeb4a95b0800000000000000
+      internalID: -5360888930411846356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_70
+      rect:
+        serializedVersion: 2
+        x: 3231
+        y: 23
+        width: 99
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc24dc676164c8440800000000000000
+      internalID: 4939399953614979789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_71
+      rect:
+        serializedVersion: 2
+        x: 3233
+        y: 86
+        width: 86
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 767a8602d79090380800000000000000
+      internalID: -9004655546931304601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_72
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 78
+        width: 103
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8270369032def3a60800000000000000
+      internalID: 7656098626290255656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_73
+      rect:
+        serializedVersion: 2
+        x: 4422
+        y: 23
+        width: 100
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e966afe458e7a93f0800000000000000
+      internalID: -893262465058838882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_74
+      rect:
+        serializedVersion: 2
+        x: 4424
+        y: 86
+        width: 85
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78107eb79d0119380800000000000000
+      internalID: -8966366856845262457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_75
+      rect:
+        serializedVersion: 2
+        x: 5060
+        y: 78
+        width: 105
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5a8543194236cc40800000000000000
+      internalID: 5532164481708558942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_76
+      rect:
+        serializedVersion: 2
+        x: 5593
+        y: 23
+        width: 100
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc8467b795b9c1500800000000000000
+      internalID: 368340078163282125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_77
+      rect:
+        serializedVersion: 2
+        x: 5595
+        y: 86
+        width: 86
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8a3333fdb0582810800000000000000
+      internalID: 1740730032737958538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_78
+      rect:
+        serializedVersion: 2
+        x: 6278
+        y: 78
+        width: 105
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93f502ff9cf305130800000000000000
+      internalID: 3553410242796609337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_79
+      rect:
+        serializedVersion: 2
+        x: 6811
+        y: 23
+        width: 101
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8fb7719c4694c090800000000000000
+      internalID: -8015116181210415220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_80
+      rect:
+        serializedVersion: 2
+        x: 6814
+        y: 86
+        width: 85
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d2756e314db91d00800000000000000
+      internalID: 943993684828189398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_81
+      rect:
+        serializedVersion: 2
+        x: 7470
+        y: 78
+        width: 104
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a7a5e530fb25f780800000000000000
+      internalID: -8649959198598781021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_82
+      rect:
+        serializedVersion: 2
+        x: 8002
+        y: 23
+        width: 101
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63b45ad1ced87f700800000000000000
+      internalID: 574083522762197814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_83
+      rect:
+        serializedVersion: 2
+        x: 8004
+        y: 86
+        width: 87
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 396c5d2ac561e6350800000000000000
+      internalID: 6011767139710912147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_84
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 0
+        width: 120
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a958ee0e189589310800000000000000
+      internalID: 1411976897540031898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_85
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 0
+        width: 119
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e2465fdf297e1ab0800000000000000
+      internalID: -5035454086836239639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_86
+      rect:
+        serializedVersion: 2
+        x: 2678
+        y: 0
+        width: 120
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2689c8ef23b857b20800000000000000
+      internalID: 3131562167041300578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_87
+      rect:
+        serializedVersion: 2
+        x: 3869
+        y: 0
+        width: 120
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cb8214af0c4063d0800000000000000
+      internalID: -3215486503881634872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_88
+      rect:
+        serializedVersion: 2
+        x: 5041
+        y: 0
+        width: 120
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b0ecb136f70bb990800000000000000
+      internalID: -7369287611283873610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_89
+      rect:
+        serializedVersion: 2
+        x: 6258
+        y: 0
+        width: 121
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66bf3e88bc0659e20800000000000000
+      internalID: 3356695524565842790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sawit_90
+      rect:
+        serializedVersion: 2
+        x: 7450
+        y: 0
+        width: 121
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e3febfbe047413f0800000000000000
+      internalID: -930991616263523359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sawit_0: -4775391259286606831
+      sawit_1: 9160646621207821323
+      sawit_10: 8517985497124191737
+      sawit_11: -5345318266186919359
+      sawit_12: 878661046922682629
+      sawit_13: 8924915487500225163
+      sawit_14: 7711674236009026463
+      sawit_15: -7885183519772474545
+      sawit_16: -1218141716564768060
+      sawit_17: -1547105736523957925
+      sawit_18: 9175573031461218959
+      sawit_19: 6983819591973517607
+      sawit_2: -7140316848421790748
+      sawit_20: 7127425106726854967
+      sawit_21: -7799481252935135730
+      sawit_22: 5827219762124875611
+      sawit_23: 8020015546230450467
+      sawit_24: 3537761356318344517
+      sawit_25: 6311173046270026660
+      sawit_26: 7510189867359400784
+      sawit_27: -1503843362615350370
+      sawit_28: 3415099028697425727
+      sawit_29: 93577887228207459
+      sawit_3: -2403522360756194241
+      sawit_30: -1671844633296698149
+      sawit_31: -6629380361313658451
+      sawit_32: 8935800789249340749
+      sawit_33: 1322153288592960897
+      sawit_34: 6405261169212406692
+      sawit_35: -1839219412577354120
+      sawit_36: 2072686188670339773
+      sawit_37: 8390039222233224491
+      sawit_38: 396821600107764771
+      sawit_39: 2895352982633185492
+      sawit_4: 4980457022479027669
+      sawit_40: -8888066949043545765
+      sawit_41: -4651924079497354816
+      sawit_42: 3354785852174405852
+      sawit_43: 2781225241057220093
+      sawit_44: 7304594432213675065
+      sawit_45: 397564034668239764
+      sawit_46: 9123094849330702392
+      sawit_47: -8269954683377643856
+      sawit_48: -5064692928769419178
+      sawit_49: 3870595920563501921
+      sawit_5: 5597668626899146456
+      sawit_50: -2571906287359005833
+      sawit_51: 7766317453616281795
+      sawit_52: -7365628397163613326
+      sawit_53: -6256236156771101087
+      sawit_54: -3430019668137212370
+      sawit_55: -397018645898782487
+      sawit_56: 9082455710051768471
+      sawit_57: -7916998341606658968
+      sawit_58: -6990269546998715302
+      sawit_59: -2676533785188860812
+      sawit_6: 1202625245461096566
+      sawit_60: -6123018221428298077
+      sawit_61: 289270630465372328
+      sawit_62: -5928610079270927233
+      sawit_63: 6897467104395043224
+      sawit_64: 4167309915462999791
+      sawit_65: 4318611944383205526
+      sawit_66: 7167824882920236240
+      sawit_67: 9040655571127798568
+      sawit_68: -5310723966353386494
+      sawit_69: -5360888930411846356
+      sawit_7: 6720803153710750876
+      sawit_70: 4939399953614979789
+      sawit_71: -9004655546931304601
+      sawit_72: 7656098626290255656
+      sawit_73: -893262465058838882
+      sawit_74: -8966366856845262457
+      sawit_75: 5532164481708558942
+      sawit_76: 368340078163282125
+      sawit_77: 1740730032737958538
+      sawit_78: 3553410242796609337
+      sawit_79: -8015116181210415220
+      sawit_8: 4995019613401099470
+      sawit_80: 943993684828189398
+      sawit_81: -8649959198598781021
+      sawit_82: 574083522762197814
+      sawit_83: 6011767139710912147
+      sawit_84: 1411976897540031898
+      sawit_85: -5035454086836239639
+      sawit_86: 3131562167041300578
+      sawit_87: -3215486503881634872
+      sawit_88: -7369287611283873610
+      sawit_89: 3356695524565842790
+      sawit_9: 8584977120795763586
+      sawit_90: -930991616263523359
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
