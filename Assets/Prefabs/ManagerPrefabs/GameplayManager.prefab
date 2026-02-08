@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f0dff9bbc99e249a424ea01fbd1d50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameplayManager
-  restartDelay: 2
+  restartDelay: 1
   isRestartSceneWhenPlayerDie: 1
   explanationCamera: {fileID: 146037401695338772}
   playerCamera: {fileID: 0}
