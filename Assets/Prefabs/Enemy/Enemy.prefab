@@ -156,6 +156,10 @@ MonoBehaviour:
   attackPoint: {fileID: 2296469286167075742}
   attackRadius: 1.9
   attackCooldown: 1.5
+  attackSound:
+    ID: 1073741845
+    _sourceAsset: {fileID: 11400000, guid: bfb665231dac0634699bf96c87be4f03, type: 2}
+    <DebugObject>k__BackingField: {fileID: 5272217800140447419}
 --- !u!50 &8832290231489051738
 Rigidbody2D:
   serializedVersion: 5

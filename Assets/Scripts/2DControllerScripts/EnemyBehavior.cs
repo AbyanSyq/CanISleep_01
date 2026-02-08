@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using Ami.BroAudio;
+using System.ComponentModel;
 
 public class EnemyController : MonoBehaviour
 {
@@ -24,11 +26,14 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float attackRadius = 0.5f;
     [SerializeField] private float attackCooldown = 1.5f; // Menggantikan Coroutine cooldown
 
+    [Header("Audio")]
+    public SoundID attackSound;
+
     private Transform currentPatrolTarget;
     private Transform playerTarget; // Menyimpan referensi player yang terdeteksi
     private Rigidbody2D rb;
     private Animator anim;
-    
+
     private bool isWaiting = false;
     private float lastAttackTime = 0f; // Timer untuk cooldown
 
@@ -43,8 +48,8 @@ public class EnemyController : MonoBehaviour
         anim = GetComponent<Animator>();
         currentPatrolTarget = pointA;
         // Opsional: Lepaskan parent point A/B agar ikut bergerak jika enemy child dari objek lain
-        if(pointA != null) pointA.parent = null;
-        if(pointB != null) pointB.parent = null;
+        if (pointA != null) pointA.parent = null;
+        if (pointB != null) pointB.parent = null;
 
         currentState = EnemyState.Patrol;
     }
@@ -94,7 +99,7 @@ public class EnemyController : MonoBehaviour
             case EnemyState.Idle:
                 StopMovement();
                 // TAMBAHAN: Jika tidak sedang nunggu (isWaiting false), paksa jalan patroli
-                if (!isWaiting) 
+                if (!isWaiting)
                 {
                     currentState = EnemyState.Patrol;
                 }
@@ -150,6 +155,7 @@ public class EnemyController : MonoBehaviour
         {
             lastAttackTime = Time.time;
             anim.SetTrigger(ANIM_ATTACK_TRIGGER);
+            BroAudio.Play(attackSound);
         }
     }
 
@@ -187,16 +193,16 @@ public class EnemyController : MonoBehaviour
     {
         isWaiting = true;
         StopMovement();
-        
+
         // Pakai state Idle agar animasi berubah ke Idle
         EnemyState previousState = currentState;
-        currentState = EnemyState.Idle; 
+        currentState = EnemyState.Idle;
 
         yield return new WaitForSeconds(waitTimeAtPoint);
 
         // Switch target patroli
         currentPatrolTarget = (currentPatrolTarget == pointA) ? pointB : pointA;
-        
+
         currentState = EnemyState.Patrol; // Paksa kembali ke patrol
         isWaiting = false;
     }
@@ -224,7 +230,7 @@ public class EnemyController : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, detectionRange); // Area Deteksi
-        
+
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange); // Area Mulai Attack
 
