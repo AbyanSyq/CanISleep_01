@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2296469286167075742}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 8982867482283471192}
   - component: {fileID: 5025794539545136490}
   - component: {fileID: 4676465167753682561}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,13 +148,13 @@ MonoBehaviour:
   pointB: {fileID: 0}
   waitTimeAtPoint: 2
   detectionRange: 5
-  attackRange: 4.71
+  attackRange: 1.89
   damageAmount: 10
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
   attackPoint: {fileID: 2296469286167075742}
-  attackRadius: 2.65
+  attackRadius: 1.9
   attackCooldown: 1.5
 --- !u!50 &8832290231489051738
 Rigidbody2D:
@@ -239,8 +239,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.52870953, y: -1.1766535}
-  m_Size: {x: 1.6747768, y: 1.6747768}
+  m_Offset: {x: 0.52870953, y: -0.78}
+  m_Size: {x: 1.6747768, y: 2.71}
   m_Direction: 0
 --- !u!114 &5025794539545136490
 MonoBehaviour:

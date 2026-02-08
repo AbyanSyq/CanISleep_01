@@ -45,6 +45,8 @@ public class EnemyController : MonoBehaviour
         // Opsional: Lepaskan parent point A/B agar ikut bergerak jika enemy child dari objek lain
         if(pointA != null) pointA.parent = null;
         if(pointB != null) pointB.parent = null;
+
+        currentState = EnemyState.Patrol;
     }
 
     void Update()
@@ -91,8 +93,12 @@ public class EnemyController : MonoBehaviour
         {
             case EnemyState.Idle:
                 StopMovement();
+                // TAMBAHAN: Jika tidak sedang nunggu (isWaiting false), paksa jalan patroli
+                if (!isWaiting) 
+                {
+                    currentState = EnemyState.Patrol;
+                }
                 break;
-
             case EnemyState.Patrol:
                 PatrolLogic();
                 break;
@@ -115,7 +121,8 @@ public class EnemyController : MonoBehaviour
 
         MoveTo(currentPatrolTarget.position, patrolSpeed);
 
-        if (Vector2.Distance(transform.position, currentPatrolTarget.position) < 0.2f)
+        // FIX 3: Perkecil jarak toleransi (sebelumnya 2.5f terlalu jauh)
+        if (Vector2.Distance(transform.position, currentPatrolTarget.position) < 1f)
         {
             StartCoroutine(WaitAtPatrolPoint());
         }
@@ -164,9 +171,9 @@ public class EnemyController : MonoBehaviour
     {
         // Logic Flip sederhana
         if (transform.position.x < targetPos.x)
-            transform.localScale = new Vector3(1, 1, 1); // Hadap Kanan
+            transform.localScale = new Vector3(-1, 1, 1); // Hadap Kanan
         else if (transform.position.x > targetPos.x)
-            transform.localScale = new Vector3(-1, 1, 1); // Hadap Kiri
+            transform.localScale = new Vector3(1, 1, 1); // Hadap Kiri
     }
 
     private void StopMovement()

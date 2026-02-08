@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 7421507262884580398}
   - component: {fileID: 5824356534652816918}
   - component: {fileID: 4157000612448489706}
-  m_Layer: 4
+  m_Layer: 3
   m_Name: Player2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2963082960236576677}
-  m_Layer: 4
+  m_Layer: 3
   m_Name: GroundCheckPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
