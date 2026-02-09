@@ -346,7 +346,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.36171907, y: 0}
+  m_Offset: {x: 0.3211174, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -356,7 +356,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.38075697, y: 1}
+  m_Size: {x: 0.31642297, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &196556189
 SpriteRenderer:
@@ -444,8 +444,8 @@ Transform:
   m_GameObject: {fileID: 246963997}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0030562019, y: -0.52325284, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.03118, y: -0.52325284, z: 0}
+  m_LocalScale: {x: 0.19084051, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1312339715}
@@ -1362,9 +1362,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: GroundTall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4390786975278883050, guid: c2ece4a74346b47409a6c5541e2ae457, type: 3}
+      propertyPath: m_Size.x
+      value: 34.788017
+      objectReference: {fileID: 0}
+    - target: {fileID: 4390786975278883050, guid: c2ece4a74346b47409a6c5541e2ae457, type: 3}
+      propertyPath: m_DrawMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132465201694665459, guid: c2ece4a74346b47409a6c5541e2ae457, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9864604
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132465201694665459, guid: c2ece4a74346b47409a6c5541e2ae457, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.99453557
+      objectReference: {fileID: 0}
     - target: {fileID: 5132465201694665459, guid: c2ece4a74346b47409a6c5541e2ae457, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.497805
+      value: 39.0111
       objectReference: {fileID: 0}
     - target: {fileID: 5132465201694665459, guid: c2ece4a74346b47409a6c5541e2ae457, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1548,7 +1564,7 @@ PrefabInstance:
       objectReference: {fileID: 2072896866}
     - target: {fileID: 3036245720058023683, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
       propertyPath: isRestartSceneWhenPlayerDie
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4715597081673845457, guid: 5ca9962a942eed243b9fa7c65a4b1494, type: 3}
       propertyPath: playerHealth
